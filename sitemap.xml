@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://baalajimaestro.me/posts/opensource-and-monetisation/</loc>
+    <lastmod>2019-06-24T03:30:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://baalajimaestro.me/posts/</loc>
+    <lastmod>2019-06-24T03:30:00+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://baalajimaestro.me/</loc>
+    <lastmod>2019-06-24T03:30:00+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://baalajimaestro.me/posts/git-for-newbies/</loc>
+    <lastmod>2019-06-18T12:29:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://baalajimaestro.me/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baalajimaestro.me/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://baalajimaestro.me/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://baalajimaestro.me/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

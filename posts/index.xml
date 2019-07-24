@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on baalajimaestro</title>
+    <link>https://baalajimaestro.me/posts/</link>
+    <description>Recent content in Posts on baalajimaestro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Maestro Creativescape</copyright>
+    <lastBuildDate>Mon, 24 Jun 2019 03:30:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://baalajimaestro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Opensource and Monetization</title>
+      <link>https://baalajimaestro.me/posts/opensource-and-monetisation/</link>
+      <pubDate>Mon, 24 Jun 2019 03:30:00 +0530</pubDate>
+      
+      <guid>https://baalajimaestro.me/posts/opensource-and-monetisation/</guid>
+      <description>Seems like these don’t go hand in hand, does it?
+Lemme view it from my perspective.
+Recently there was an android kernel developer who tried to monetize his kernel in the most inappropriate way possible. It became disastrous and he became a meme in that process. He was forced to leave development, forever.
+So, is monetizing opensource software cancerous?
+Red Hat is the global leader in open source software solutions — and has a clear strategy in how to generate revenue.</description>
+    </item>
+    
+    <item>
+      <title>Git For Newbies</title>
+      <link>https://baalajimaestro.me/posts/git-for-newbies/</link>
+      <pubDate>Tue, 18 Jun 2019 12:29:41 +0800</pubDate>
+      
+      <guid>https://baalajimaestro.me/posts/git-for-newbies/</guid>
+      <description>Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
+ Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&amp;rsquo;t have to type $ on your terminal.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>baalajimaestro</title>
+    <link>https://baalajimaestro.me/</link>
+    <description>Recent content on baalajimaestro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Maestro Creativescape</copyright>
+    <lastBuildDate>Mon, 24 Jun 2019 03:30:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://baalajimaestro.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Opensource and Monetization</title>
+      <link>https://baalajimaestro.me/posts/opensource-and-monetisation/</link>
+      <pubDate>Mon, 24 Jun 2019 03:30:00 +0530</pubDate>
+      
+      <guid>https://baalajimaestro.me/posts/opensource-and-monetisation/</guid>
+      <description>Seems like these don’t go hand in hand, does it?
+Lemme view it from my perspective.
+Recently there was an android kernel developer who tried to monetize his kernel in the most inappropriate way possible. It became disastrous and he became a meme in that process. He was forced to leave development, forever.
+So, is monetizing opensource software cancerous?
+Red Hat is the global leader in open source software solutions — and has a clear strategy in how to generate revenue.</description>
+    </item>
+    
+    <item>
+      <title>Git For Newbies</title>
+      <link>https://baalajimaestro.me/posts/git-for-newbies/</link>
+      <pubDate>Tue, 18 Jun 2019 12:29:41 +0800</pubDate>
+      
+      <guid>https://baalajimaestro.me/posts/git-for-newbies/</guid>
+      <description>Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
+ Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&amp;rsquo;t have to type $ on your terminal.</description>
+    </item>
+    
+    <item>
+      <title>$whoami</title>
+      <link>https://baalajimaestro.me/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://baalajimaestro.me/about/</guid>
+      <description>I am Baalaji Balasubramani, popularly known around the internet world as baalajimaestro. My main in­ter­est, is Android for the past few years now, I have a great passion towards coding, automating stuff(basically I am lazy), kernel hacking(not the hacking you think about). I build Android ROMs like #JustAnotherBuildBot
+I mostly contribute to Telegram UserBot
+It&amp;rsquo;s hard to see me without writing or thinking about code, even if you happen to do so, I would have been sleeping or gaming!</description>
+    </item>
+    
+    <item>
+      <title>Contact Me</title>
+      <link>https://baalajimaestro.me/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://baalajimaestro.me/contact/</guid>
+      <description>I would be available on Telegram almost all time except my sleep xD. Best would be ping me there for anything. If you don&amp;rsquo;t have Telegram, no problemo, you can reach me out on Instagram. For any formal correspondence, Email which has become too formal: baalajimaestro@computer4u.com</description>
+    </item>
+    
+  </channel>
+</rss>
