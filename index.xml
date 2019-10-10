@@ -19,7 +19,7 @@
       
       <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
       <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
-!&amp;gt; Note that you need a fully synced rom source for this.
+⚠️ Note that you need a fully synced rom source for this.
  Place the Device Tree with the extract-files.sh inside.
  If your device tree doesn&amp;rsquo;t have an extract-files script, get it from github, its almost on every tree.</description>
     </item>
