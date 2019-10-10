@@ -84,8 +84,8 @@ mkdir -p vendor
 
 <li><p>Now the extraction.</p>
 
-<pre><code class="language-bash">7z x system.img -y -osystem &gt; /dev/null 2&gt;&amp;1
-7z x vendor.img -y -ovendor &gt; /dev/null 2&gt;&amp;1
+<pre><code class="language-bash">7z x system.img -y -osystem
+7z x vendor.img -y -ovendor
 </code></pre></li>
 </ul>
 
@@ -98,8 +98,10 @@ mkdir -p vendor
 
 <li><p>cd to the device tree, and run the command</p>
 
-<pre><code class="language-bash">bash extract-files.sh ~/miui
+<pre><code class="language-bash">bash extract-files.sh ~/dump
 </code></pre></li>
+
+<li><p>Your vendor blobs would be at <code>vendor/brand/device</code></p></li>
 </ul>
 ]]></content>
         </item>
