@@ -6,8 +6,103 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Maestro Creativescape</copyright>
-        <lastBuildDate>Mon, 24 Jun 2019 03:30:00 +0530</lastBuildDate>
+        <lastBuildDate>Thu, 10 Oct 2019 21:24:00 +0530</lastBuildDate>
         <atom:link href="https://baalajimaestro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Vendor Blob Extraction</title>
+            <link>https://baalajimaestro.me/posts/extract-vendor/</link>
+            <pubDate>Thu, 10 Oct 2019 21:24:00 +0530</pubDate>
+            
+            <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
+            <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
+!&amp;gt; Note that you need a fully synced rom source for this.
+ Place the Device Tree with the extract-files.sh inside.
+ If your device tree doesn&amp;rsquo;t have an extract-files script, get it from github, its almost on every tree.</description>
+            <content type="html"><![CDATA[
+
+<h3 id="how-to-extract-vendor-blobs-from-stock-rom">How to extract vendor blobs from stock rom?</h3>
+
+<p>I got asked this question a lot, so I&rsquo;ll post it here. Its gonna just be steps on how to do it.</p>
+
+<p>!&gt; Note that you need a fully synced rom source for this.</p>
+
+<ul>
+<li><p>Place the Device Tree with the extract-files.sh inside.</p></li>
+
+<li><p>If your device tree doesn&rsquo;t have an extract-files script, get it from github, its almost on every tree.</p></li>
+
+<li><p>Grab the stock rom for your device, MIUI/OOS or OneUI whatever.</p></li>
+
+<li><p>Create a new folder named dump and extract it there.</p></li>
+
+<li><p>Now see if it has a payload.bin or system.dat.br and vendor.dat.br</p></li>
+</ul>
+
+<h5 id="if-it-has-a-payload-bin-then-your-device-is-a-b-and-the-job-is-actually-very-easy">If it has a payload.bin, then, your device is A/B, and the job is actually very easy,</h5>
+
+<ul>
+<li>Use <a href="https://forum.xda-developers.com/attachment.php?attachmentid=4760222">this tool</a> and run the python file in it.</li>
+<li>You will now have img files ready.</li>
+</ul>
+
+<h5 id="you-are-unlucky-and-have-br-files-inside">You are unlucky and have br files inside.</h5>
+
+<p>So what? We can still extract them, a bit of more work, but yes we can.</p>
+
+<ul>
+<li>Install brotli from your package manager</li>
+
+<li><p>Run the following commands, it will decompress the brotli compression of your images</p>
+
+<pre><code class="language-bash">brotli --decompress system.new.dat.br
+brotli --decompress vendor.new.dat.br
+</code></pre></li>
+
+<li><p>Now we to convert the dat files to img, run these commands on terminal, to convert it</p>
+
+<pre><code class="language-bash">curl -sLo sdat2img.py https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
+python3 sdat2img.py system.transfer.list system.new.dat
+python3 sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
+</code></pre></li>
+
+<li><p>Now you would have both the images ready for extracting.</p></li>
+</ul>
+
+<h5 id="final-step">Final Step</h5>
+
+<p>Lets Extract the img files we have!</p>
+
+<ul>
+<li><p>Create folders for extracting.</p>
+
+<pre><code class="language-bash">mkdir -p system
+mkdir -p vendor
+</code></pre></li>
+
+<li><p>Install P7-Zip from your package manager</p></li>
+
+<li><p>Now the extraction.</p>
+
+<pre><code class="language-bash">7z x system.img -y -osystem &gt; /dev/null 2&gt;&amp;1
+7z x vendor.img -y -ovendor &gt; /dev/null 2&gt;&amp;1
+</code></pre></li>
+</ul>
+
+<p>In your folder, there would be two folders system and vendor, with many files now.</p>
+
+<h4 id="pulling-blobs">Pulling  blobs</h4>
+
+<ul>
+<li><p>The work directory which had the system and vendor folders is assumed to be at ~/dump for now.</p></li>
+
+<li><p>cd to the device tree, and run the command</p>
+
+<pre><code class="language-bash">bash extract-files.sh ~/miui
+</code></pre></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Opensource and Monetization</title>
@@ -757,101 +852,6 @@ $ git rebase --continue
 
 <pre><code class="language-bash">$ git config --global alias.mylog &quot;log --oneline --decorate --graph&quot;
 </code></pre>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Vendor Blob Extraction</title>
-            <link>https://baalajimaestro.me/posts/extract-vendor/</link>
-            <pubDate>Tue, 18 Jun 2019 12:29:41 +0800</pubDate>
-            
-            <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
-            <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
-!&amp;gt; Note that you need a fully synced rom source for this.
- Place the Device Tree with the extract-files.sh inside.
- If your device tree doesn&amp;rsquo;t have an extract-files script, get it from github, its almost on every tree.</description>
-            <content type="html"><![CDATA[
-
-<h3 id="how-to-extract-vendor-blobs-from-stock-rom">How to extract vendor blobs from stock rom?</h3>
-
-<p>I got asked this question a lot, so I&rsquo;ll post it here. Its gonna just be steps on how to do it.</p>
-
-<p>!&gt; Note that you need a fully synced rom source for this.</p>
-
-<ul>
-<li><p>Place the Device Tree with the extract-files.sh inside.</p></li>
-
-<li><p>If your device tree doesn&rsquo;t have an extract-files script, get it from github, its almost on every tree.</p></li>
-
-<li><p>Grab the stock rom for your device, MIUI/OOS or OneUI whatever.</p></li>
-
-<li><p>Create a new folder named dump and extract it there.</p></li>
-
-<li><p>Now see if it has a payload.bin or system.dat.br and vendor.dat.br</p></li>
-</ul>
-
-<h5 id="if-it-has-a-payload-bin-then-your-device-is-a-b-and-the-job-is-actually-very-easy">If it has a payload.bin, then, your device is A/B, and the job is actually very easy,</h5>
-
-<ul>
-<li>Use <a href="https://forum.xda-developers.com/attachment.php?attachmentid=4760222">this tool</a> and run the python file in it.</li>
-<li>You will now have img files ready.</li>
-</ul>
-
-<h5 id="you-are-unlucky-and-have-br-files-inside">You are unlucky and have br files inside.</h5>
-
-<p>So what? We can still extract them, a bit of more work, but yes we can.</p>
-
-<ul>
-<li>Install brotli from your package manager</li>
-
-<li><p>Run the following commands, it will decompress the brotli compression of your images</p>
-
-<pre><code class="language-bash">brotli --decompress system.new.dat.br
-brotli --decompress vendor.new.dat.br
-</code></pre></li>
-
-<li><p>Now we to convert the dat files to img, run these commands on terminal, to convert it</p>
-
-<pre><code class="language-bash">curl -sLo sdat2img.py https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
-python3 sdat2img.py system.transfer.list system.new.dat
-python3 sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
-</code></pre></li>
-
-<li><p>Now you would have both the images ready for extracting.</p></li>
-</ul>
-
-<h5 id="final-step">Final Step</h5>
-
-<p>Lets Extract the img files we have!</p>
-
-<ul>
-<li><p>Create folders for extracting.</p>
-
-<pre><code class="language-bash">mkdir -p system
-mkdir -p vendor
-</code></pre></li>
-
-<li><p>Install P7-Zip from your package manager</p></li>
-
-<li><p>Now the extraction.</p>
-
-<pre><code class="language-bash">7z x system.img -y -osystem &gt; /dev/null 2&gt;&amp;1
-7z x vendor.img -y -ovendor &gt; /dev/null 2&gt;&amp;1
-</code></pre></li>
-</ul>
-
-<p>In your folder, there would be two folders system and vendor, with many files now.</p>
-
-<h4 id="pulling-blobs">Pulling  blobs</h4>
-
-<ul>
-<li><p>The work directory which had the system and vendor folders is assumed to be at ~/dump for now.</p></li>
-
-<li><p>cd to the device tree, and run the command</p>
-
-<pre><code class="language-bash">bash extract-files.sh ~/miui
-</code></pre></li>
-</ul>
 ]]></content>
         </item>
         

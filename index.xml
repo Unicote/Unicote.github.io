@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Maestro Creativescape</copyright>
-    <lastBuildDate>Mon, 24 Jun 2019 03:30:00 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2019 21:24:00 +0530</lastBuildDate>
     
 	<atom:link href="https://baalajimaestro.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vendor Blob Extraction</title>
+      <link>https://baalajimaestro.me/posts/extract-vendor/</link>
+      <pubDate>Thu, 10 Oct 2019 21:24:00 +0530</pubDate>
+      
+      <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
+      <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
+!&amp;gt; Note that you need a fully synced rom source for this.
+ Place the Device Tree with the extract-files.sh inside.
+ If your device tree doesn&amp;rsquo;t have an extract-files script, get it from github, its almost on every tree.</description>
+    </item>
     
     <item>
       <title>Opensource and Monetization</title>
@@ -33,18 +45,6 @@ Red Hat is the global leader in open source software solutions — and has a cle
       <guid>https://baalajimaestro.me/posts/git-for-newbies/</guid>
       <description>Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
  Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&amp;rsquo;t have to type $ on your terminal.</description>
-    </item>
-    
-    <item>
-      <title>Vendor Blob Extraction</title>
-      <link>https://baalajimaestro.me/posts/extract-vendor/</link>
-      <pubDate>Tue, 18 Jun 2019 12:29:41 +0800</pubDate>
-      
-      <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
-      <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
-!&amp;gt; Note that you need a fully synced rom source for this.
- Place the Device Tree with the extract-files.sh inside.
- If your device tree doesn&amp;rsquo;t have an extract-files script, get it from github, its almost on every tree.</description>
     </item>
     
     <item>
