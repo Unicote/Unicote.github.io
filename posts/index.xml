@@ -69,7 +69,7 @@ python3 sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
 <li><p>Now you would have both the images ready for extracting.</p></li>
 </ul>
 
-<h5 id="final-step">Final Step</h5>
+<h3 id="final-step">Final Step</h3>
 
 <p>Lets Extract the img files we have!</p>
 
@@ -91,7 +91,7 @@ mkdir -p vendor
 
 <p>In your folder, there would be two folders system and vendor, with many files now.</p>
 
-<h4 id="pulling-blobs">Pulling  blobs</h4>
+<h3 id="pulling-blobs">Pulling  blobs</h3>
 
 <ul>
 <li><p>The work directory which had the system and vendor folders is assumed to be at ~/dump for now.</p></li>
