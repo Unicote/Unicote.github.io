@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
+<meta name="description" content="How to extract vendor blobs from stock rom? I got asked this question a lot, so I&#39;ll post it here. Its gonna just be steps on how to do it.
 ⚠️ Note that you need a fully synced rom source for this.
- Place the Device Tree with the extract-files.sh inside.
- If your device tree doesn&amp;rsquo;t have an extract-files script, get it from github, its almost on every tree." />
+  Place the Device Tree with the extract-files.sh inside.
+  If your device tree doesn&#39;t have an extract-files script, get it from github, its almost on every tree." />
 <meta name="keywords" content="homepage, blog programming" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -34,25 +34,22 @@
 
 
 <meta itemprop="name" content="Vendor Blob Extraction">
-<meta itemprop="description" content="How to extract vendor blobs from stock rom? I got asked this question a lot, so I&rsquo;ll post it here. Its gonna just be steps on how to do it.
+<meta itemprop="description" content="How to extract vendor blobs from stock rom? I got asked this question a lot, so I&#39;ll post it here. Its gonna just be steps on how to do it.
 ⚠️ Note that you need a fully synced rom source for this.
- Place the Device Tree with the extract-files.sh inside.
- If your device tree doesn&rsquo;t have an extract-files script, get it from github, its almost on every tree.">
-
-
+  Place the Device Tree with the extract-files.sh inside.
+  If your device tree doesn&#39;t have an extract-files script, get it from github, its almost on every tree.">
 <meta itemprop="datePublished" content="2019-10-10T21:24:00&#43;05:30" />
 <meta itemprop="dateModified" content="2019-10-10T21:24:00&#43;05:30" />
 <meta itemprop="wordCount" content="315">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vendor Blob Extraction"/>
-<meta name="twitter:description" content="How to extract vendor blobs from stock rom? I got asked this question a lot, so I&rsquo;ll post it here. Its gonna just be steps on how to do it.
+<meta name="twitter:description" content="How to extract vendor blobs from stock rom? I got asked this question a lot, so I&#39;ll post it here. Its gonna just be steps on how to do it.
 ⚠️ Note that you need a fully synced rom source for this.
- Place the Device Tree with the extract-files.sh inside.
- If your device tree doesn&rsquo;t have an extract-files script, get it from github, its almost on every tree."/>
+  Place the Device Tree with the extract-files.sh inside.
+  If your device tree doesn&#39;t have an extract-files script, get it from github, its almost on every tree."/>
 
 
 
@@ -130,89 +127,78 @@
             
 
             <div class="post-content">
-                
-
-<h2 id="how-to-extract-vendor-blobs-from-stock-rom">How to extract vendor blobs from stock rom?</h2>
-
-<p>I got asked this question a lot, so I&rsquo;ll post it here. Its gonna just be steps on how to do it.</p>
-
+                <h2 id="how-to-extract-vendor-blobs-from-stock-rom">How to extract vendor blobs from stock rom?</h2>
+<p>I got asked this question a lot, so I'll post it here. Its gonna just be steps on how to do it.</p>
 <p>⚠️ Note that you need a fully synced rom source for this.</p>
-
 <ul>
-<li><p>Place the Device Tree with the extract-files.sh inside.</p></li>
-
-<li><p>If your device tree doesn&rsquo;t have an extract-files script, get it from github, its almost on every tree.</p></li>
-
-<li><p>Grab the stock rom for your device, MIUI/OOS or OneUI whatever.</p></li>
-
-<li><p>Create a new folder named dump and extract it there.</p></li>
-
-<li><p>Now see if it has a payload.bin or system.dat.br and vendor.dat.br</p></li>
+<li>
+<p>Place the Device Tree with the extract-files.sh inside.</p>
+</li>
+<li>
+<p>If your device tree doesn't have an extract-files script, get it from github, its almost on every tree.</p>
+</li>
+<li>
+<p>Grab the stock rom for your device, MIUI/OOS or OneUI whatever.</p>
+</li>
+<li>
+<p>Create a new folder named dump and extract it there.</p>
+</li>
+<li>
+<p>Now see if it has a payload.bin or system.dat.br and vendor.dat.br</p>
+</li>
 </ul>
-
-<h3 id="if-it-has-a-payload-bin-then-your-device-is-a-b-and-the-job-is-actually-very-easy">If it has a payload.bin, then, your device is A/B, and the job is actually very easy,</h3>
-
+<h3 id="if-it-has-a-payloadbin-then-your-device-is-ab-and-the-job-is-actually-very-easy">If it has a payload.bin, then, your device is A/B, and the job is actually very easy,</h3>
 <ul>
 <li>Use <a href="https://forum.xda-developers.com/attachment.php?attachmentid=4760222">this tool</a> and run the python file in it.</li>
 <li>You will now have img files ready.</li>
 </ul>
-
 <h3 id="you-are-unlucky-and-have-br-files-inside">You are unlucky and have br files inside.</h3>
-
 <p>So what? We can still extract them, a bit of more work, but yes we can.</p>
-
 <ul>
 <li>Install brotli from your package manager</li>
-
-<li><p>Run the following commands, it will decompress the brotli compression of your images</p>
-
-<pre><code class="language-bash">brotli --decompress system.new.dat.br
+<li>Run the following commands, it will decompress the brotli compression of your images</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brotli --decompress system.new.dat.br
 brotli --decompress vendor.new.dat.br
-</code></pre></li>
-
-<li><p>Now we to convert the dat files to img, run these commands on terminal, to convert it</p>
-
-<pre><code class="language-bash">curl -sLo sdat2img.py https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
+</code></pre></div><ul>
+<li>Now we to convert the dat files to img, run these commands on terminal, to convert it</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sLo sdat2img.py https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
 python3 sdat2img.py system.transfer.list system.new.dat
 python3 sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
-</code></pre></li>
-
-<li><p>Now you would have both the images ready for extracting.</p></li>
+</code></pre></div><ul>
+<li>Now you would have both the images ready for extracting.</li>
 </ul>
-
 <h3 id="final-step">Final Step</h3>
-
 <p>Lets Extract the img files we have!</p>
-
 <ul>
-<li><p>Create folders for extracting.</p>
-
-<pre><code class="language-bash">mkdir -p system
-mkdir -p vendor
-</code></pre></li>
-
-<li><p>Install P7-Zip from your package manager</p></li>
-
-<li><p>Now the extraction.</p>
-
-<pre><code class="language-bash">7z x system.img -y -osystem
-7z x vendor.img -y -ovendor
-</code></pre></li>
+<li>Create folders for extracting.</li>
 </ul>
-
-<p>In your folder, there would be two folders system and vendor, with many files now.</p>
-
-<h3 id="pulling-blobs">Pulling  blobs</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p system
+mkdir -p vendor
+</code></pre></div><ul>
+<li>
+<p>Install P7-Zip from your package manager</p>
+</li>
+<li>
+<p>Now the extraction.</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z x system.img -y -osystem
+7z x vendor.img -y -ovendor
+</code></pre></div><p>In your folder, there would be two folders system and vendor, with many files now.</p>
+<h3 id="pulling--blobs">Pulling  blobs</h3>
 <ul>
-<li><p>The work directory which had the system and vendor folders is assumed to be at ~/dump for now.</p></li>
-
-<li><p>cd to the device tree, and run the command</p>
-
-<pre><code class="language-bash">bash extract-files.sh ~/dump
-</code></pre></li>
-
-<li><p>Your vendor blobs would be at <code>vendor/brand/device</code></p></li>
+<li>
+<p>The work directory which had the system and vendor folders is assumed to be at ~/dump for now.</p>
+</li>
+<li>
+<p>cd to the device tree, and run the command</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash extract-files.sh ~/dump
+</code></pre></div><ul>
+<li>Your vendor blobs would be at <code>vendor/brand/device</code></li>
 </ul>
 
             </div>
