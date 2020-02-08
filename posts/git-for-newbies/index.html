@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
- Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&#39;t have to type $ on your terminal." />
+ Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&amp;rsquo;t have to type $ on your terminal." />
 <meta name="keywords" content="homepage, blog programming" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -33,7 +33,7 @@
 
 <meta itemprop="name" content="Git For Newbies">
 <meta itemprop="description" content="Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
- Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&#39;t have to type $ on your terminal.">
+ Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&rsquo;t have to type $ on your terminal.">
 <meta itemprop="datePublished" content="2019-06-18T12:29:41&#43;08:00" />
 <meta itemprop="dateModified" content="2019-06-18T12:29:41&#43;08:00" />
 <meta itemprop="wordCount" content="2879">
@@ -43,7 +43,7 @@
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Git For Newbies"/>
 <meta name="twitter:description" content="Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
- Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&#39;t have to type $ on your terminal."/>
+ Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&rsquo;t have to type $ on your terminal."/>
 
 
 
@@ -123,7 +123,7 @@
             <div class="post-content">
                 <p>Before we start make sure <code>git --version</code> command successfully returns. If the output is something like <strong>command not found</strong> then please make sure Git is properly installed on your machine. My machine output is shown below. <strong>Output on your machine might be different.</strong></p>
 <blockquote>
-<p><strong>Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol <code>$</code>. The output of command follows the command. Also, you don't have to type <code>$</code> on your terminal.</strong></p>
+<p><strong>Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol <code>$</code>. The output of command follows the command. Also, you don&rsquo;t have to type <code>$</code> on your terminal.</strong></p>
 </blockquote>
 <p>Please be nice to Mr.Git. Introduce yourself to him. Else git will blame you for not introducing yourself <code>please tell me who you are!</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global user.name <span style="color:#e6db74">&#34;Your name&#34;</span>
@@ -178,7 +178,7 @@ $ git config --global user.email <span style="color:#e6db74">&#34;Your email&#34
 <li>Useful Git commands</li>
 </ul>
 <h2 id="vcs-version-control-system">VCS: Version Control System</h2>
-<p>A version control system is a kind of database for storing your software project source code. It lets you save a snapshot of your complete project at any time you want. When you later take a look at an older snapshot (let's start calling it &ldquo;version&rdquo;).</p>
+<p>A version control system is a kind of database for storing your software project source code. It lets you save a snapshot of your complete project at any time you want. When you later take a look at an older snapshot (let&rsquo;s start calling it &ldquo;version&rdquo;).</p>
 <p>You can use version control system to store:</p>
 <ol>
 <li>Software source code</li>
@@ -201,14 +201,14 @@ $ git config --global user.email <span style="color:#e6db74">&#34;Your email&#34
 <!-- raw HTML omitted -->
 <p>Distributed or Decentralized VCS allows many software developers to work on a project without requiring them to share a common network.</p>
 <h2 id="git-basics">Git basics</h2>
-<p>Let's start by creating an empty directory <code>git-basic</code>. Navigate to a convenient location on your local file system and create a new directory.</p>
+<p>Let&rsquo;s start by creating an empty directory <code>git-basic</code>. Navigate to a convenient location on your local file system and create a new directory.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir git-basic <span style="color:#f92672">&amp;&amp;</span> cd git-basic
 </code></pre></div><h3 id="git-init">git init</h3>
 <p>To make any repository a Git managed repository, you can type the following command. These commands should be typed from inside the <code>git-basic</code> directory.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git init
 </code></pre></div><pre><code>Initialized empty Git repository in ~/git-basic/.git/
 </code></pre><p>This will create a directory named <code>.git</code> inside the <code>git-basic</code> directory.</p>
-<p><code>.git</code> is a directory where Git stores all the data. <strong>Don't mess with the <code>.git</code> directory.</strong></p>
+<p><code>.git</code> is a directory where Git stores all the data. <strong>Don&rsquo;t mess with the <code>.git</code> directory.</strong></p>
 <p>If you want to override user for this repository, then you can add user section by either editing <code>.git/config</code> file or using the <code>git config --local</code> command.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --local user.name <span style="color:#e6db74">&#34;Shekhar 123&#34;</span>
 </code></pre></div><p>If you view the contents of the <code>.git/config</code> file now, then you will see your change.</p>
@@ -221,7 +221,7 @@ Initial commit
 
 nothing to commit (create/copy files and use &quot;git add&quot; to track)
 </code></pre><h3 id="git-add">git add</h3>
-<p>Let's create a new file <code>README.md</code> and add a dummy message.</p>
+<p>Let&rsquo;s create a new file <code>README.md</code> and add a dummy message.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;# Git Basics&#34;</span> &gt;&gt; README.md
 </code></pre></div><blockquote>
 <p><strong>It is a good practice to create a file named README.md in your repository root that tells the purpose of the repository.</strong></p>
@@ -238,7 +238,7 @@ Untracked files:
 	README.md
 
 nothing added to commit but untracked files present (use &quot;git add&quot; to track)
-</code></pre><p><strong>git add</strong> stages the changes so they are picked up by the next commit. In Git, you can't commit something until its tracked.</p>
+</code></pre><p><strong>git add</strong> stages the changes so they are picked up by the next commit. In Git, you can&rsquo;t commit something until its tracked.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add README.md
 </code></pre></div><p>Now, check the status of your Git repository.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git status
@@ -260,7 +260,7 @@ Changes to be committed:
 </code></pre></div><pre><code>[master (root-commit) 3d34eb3] first commit
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
-</code></pre><p>Staging and committing are two different steps in Git. You can't commit a change until it has been staged. If you are working with a tracked file, then you can do both of these steps in a single command.</p>
+</code></pre><p>Staging and committing are two different steps in Git. You can&rsquo;t commit a change until it has been staged. If you are working with a tracked file, then you can do both of these steps in a single command.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;This is my Git.&#34;</span>  &gt;&gt; README.md
 </code></pre></div><p>Check the status of your repository. This time it will say it is a <strong>modified</strong> change.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git status
@@ -275,7 +275,7 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 </code></pre><p>To stage and commit a change in a tracked file, you can use following command.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git commit -am <span style="color:#e6db74">&#34;second commit&#34;</span>
 </code></pre></div><h3 id="git-rm">git rm</h3>
-<p>Let's suppose we added a bad file to the Git index that we want to remove.</p>
+<p>Let&rsquo;s suppose we added a bad file to the Git index that we want to remove.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;my stupid file&#34;</span> &gt;&gt; stupid.txt
 $ git add stupid.txt
 </code></pre></div><p>To remove such a file from the Git index, we can use Git <code>rm</code> command.</p>
@@ -317,7 +317,7 @@ $ git commit -m <span style="color:#e6db74">&#34;Adding .gitignore file&#34;</sp
 </code></pre></div><blockquote>
 <p><strong>branch marked with a * is the current branch.</strong></p>
 </blockquote>
-<p>Let's suppose we have to implement some new functionality. To work on new functionality, we create a new branch called <code>feature1</code>.</p>
+<p>Let&rsquo;s suppose we have to implement some new functionality. To work on new functionality, we create a new branch called <code>feature1</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch feature1
 </code></pre></div><p>You can view branch list again.</p>
 <pre><code>$ git branch
@@ -331,12 +331,12 @@ $ git commit -m <span style="color:#e6db74">&#34;Adding .gitignore file&#34;</sp
 </code></pre></div><p>The <code>git checkout</code> command lets you navigate between the branches created by git branch.</p>
 <p>To create a new branch and checkout it in one command</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git checkout -b feature1
-</code></pre></div><p>Let's add our new feature now.</p>
+</code></pre></div><p>Let&rsquo;s add our new feature now.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;I will read a Git tutorial today to make sure I understand Git thoroughly.&#34;</span> &gt;&gt; README.md
 </code></pre></div><p>Commit it to the <code>feature1</code> branch.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git commit -am <span style="color:#e6db74">&#34;fifth commit. Read tutorial&#34;</span>
 </code></pre></div><h3 id="git-merge-ff">git merge (ff)</h3>
-<p>Once we are done with our feature, we can merge it back to master. First, we'll switch to <code>master</code> branch.</p>
+<p>Once we are done with our feature, we can merge it back to master. First, we&rsquo;ll switch to <code>master</code> branch.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git checkout master
 </code></pre></div><p><strong>git merge</strong> command allows you to merge an independent development line created by <code>git branch</code> into a single branch.</p>
 <blockquote>
@@ -349,7 +349,7 @@ $ git commit -m <span style="color:#e6db74">&#34;Adding .gitignore file&#34;</sp
 <p>the default merge algorithm is ff i.e fast forward. When the merge resolves as a fast-forward, only update the branch pointer, without creating a merge commit. This is the default behavior.</p>
 </blockquote>
 <p>A <strong>fast-forward</strong> merge can occur when there is a linear path from the current branch tip to the target branch.</p>
-<p>Now that we are done with <code>feature1</code> branch, let's delete it.</p>
+<p>Now that we are done with <code>feature1</code> branch, let&rsquo;s delete it.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -d feature1
 </code></pre></div><h3 id="git-merge---no-ff">git merge (&ndash;no-ff)</h3>
 <p>Create another new branch <code>feature2</code> and add a new commit.</p>
@@ -391,7 +391,7 @@ I will watch a Git video by Linus Torvalds https://www.youtube.com/watch?v=4XpnK
 </code></pre></div><p>View the log graph.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git log --oneline --graph
 </code></pre></div><h3 id="git-merge-conflict">git merge (conflict)</h3>
-<p>In this section, we will look at scenario where there is a merge conflict. Merge conflict happens when you're trying to merge a branch that has changed the same part of the same file as master. Let's create a new branch <code>feature4</code>, make a change, and commit.</p>
+<p>In this section, we will look at scenario where there is a merge conflict. Merge conflict happens when you&rsquo;re trying to merge a branch that has changed the same part of the same file as master. Let&rsquo;s create a new branch <code>feature4</code>, make a change, and commit.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git checkout -b feature4
 $ echo <span style="color:#e6db74">&#34;I will create a Github account today.&#34;</span> &gt;&gt; README.md
 $ git commit -am <span style="color:#e6db74">&#34;eighth commit. Signup for Github.&#34;</span>
@@ -458,7 +458,7 @@ done.
 </code></pre><p>Change directory and view the contents.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd git-basic-1
 </code></pre></div><p>You can see history of the repository using <code>git log --oneline --decorate</code> command.</p>
-<p>Let's make a change in <code>git-basics</code> repository.</p>
+<p>Let&rsquo;s make a change in <code>git-basics</code> repository.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ echo <span style="color:#e6db74">&#34;I will read Git in Practice book&#34;</span> &gt;&gt; README.md
 $ git commit -am <span style="color:#e6db74">&#34;ninth commit. Read book.&#34;</span>
 $ git push local master
