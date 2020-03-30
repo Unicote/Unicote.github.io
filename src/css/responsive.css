@@ -1,6 +1,6 @@
 
 /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 769px) {
+@media (max-width: 10%) {
 
   .name{
     font-size:26px;
