@@ -20,6 +20,21 @@
 
 }
 
+button[type="button"]{
+    color:white;
+    max-width:100%;
+    font-size: 1rem;
+    margin:0 auto;
+    margin-left: 6rem;
+    text-align: center;
+    background: transparent;
+    border:2px solid white;
+    }
+
+    button[type="button"]:hover{
+    color:black;
+    background:  white;}
+
 .front_end_skills:hover{
     box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
 }
