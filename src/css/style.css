@@ -161,9 +161,10 @@ html {
     margin-bottom:20px;
  }
 
- .header{
-    padding-top:2rem;
- }
+ .finish_page{
+   margin-bottom: 0.9rem;
+}
+
 
  nav{
      margin-bottom: 6rem;
