@@ -19,12 +19,10 @@ html {
   max-height: 100%; 
 }
 
-
  #menuToggle
  {
    display: block;
    position: relative;
-   left:1rem;
    top:2rem;
    z-index: 1;
    -webkit-user-select: none;
@@ -49,8 +47,8 @@ html {
    width: 40px;
    height: 32px;
    position: absolute;
-   top: -7px;
    left: -5px;
+   top: -7px;
    cursor: pointer;
    opacity: 0;
    z-index: 2;
@@ -104,11 +102,10 @@ html {
  #menu
  {
    position: absolute;
-   width: 100vw;
-   min-height: 100vh;
+   min-width: 117%;
+   height: 3500%;
    margin: -100px 0 0 -50px;
    padding: 50px;
-   left:2rem;
    padding-top: 125px;
    background: #000000;
    list-style-type: none;
