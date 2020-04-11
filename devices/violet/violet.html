@@ -22,23 +22,42 @@
 
     <title>KotyaTheCat</title>
   </head>
-  <body>
+   <body style="overflow-y: hidden;">
 
-    <div class="container">
-        <nav role="navigation">
-          <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader-inner"></div>
+    </div>
+    <h3>Loading...</h3>
+  </div>
 
-            <ul id="menu">
-              <a href="../../index.html"><li>Home</li></a>
-              <a href="../../devices/devices.html"><li>Devices</li></a>
-              <a href="../../about/about.html"><li>About</li></a>
-            </ul>
-          </div>
-        </nav>
+  <div class="site-menu" id="siteMenu">
+    <a class="site-menu__link site-menu__link--second" href="../../index.html">
+       <center> <i class="fa fa-home"></i> </center>
+      <p style="font-size: 18px">Home</p>
+    </a>
+    <a class="site-menu__link site-menu__link--second" href="../../about/about.html">
+       <center> <i class="fa fa-user"></i> </center>
+        <p style="font-size: 18px">About</p>
+    </a>
+    <a class="site-menu__link site-menu__link--second" href="../../devices/devices.html">
+       <center> <i class="fa fa-mobile"></i> </center>
+        <p style="font-size: 18px">Devices</p>
+    </a>
+    <a class="site-menu__link site-menu__link--second" href="../../about/contact/contact.html">
+       <center> <i class="fa fa-address-card"></i> </center>
+        <p style="font-size: 18px">Contact</p>
+    </a>
+  </div>
+  <div class="site">
+    <div class="navbar">
+      <div class="navbar__logo">KotyaTheCat</div>
+      <div class="navbar__burger" id="menuBtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
                 <div class="projects" id="projects">
                   <div class="h1 code-work">Redmi Note 7 Pro (violet)</div>
                     <div class="container">
@@ -102,5 +121,13 @@
         </div>
     </div>
     <script src="../../src/js/app.js"></script>
+    <script src="../../script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+      });
+    </script>
   </body>
 </html>

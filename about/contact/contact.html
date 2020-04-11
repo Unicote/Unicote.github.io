@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
      <script src="../../src/js/jquery.min.js"></script>
       <link rel="stylesheet" href="../../src/css/style.css">
       <link rel="stylesheet" href="../../src/css/responsive.css">
@@ -20,24 +21,38 @@
 
     <title>KotyaTheCat</title>
   </head>
-  <body>
+   <body style="overflow-y: hidden;">
 
-    <div class="container">
-        <nav role="navigation">
-          <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader-inner"></div>
+    </div>
+    <h3>Loading...</h3>
+  </div>
 
-            <ul id="menu">
-              <a href="../../index.html"><li>Home</li></a>
-              <a href="../../devices/devices.html"><li>Devices</li></a>
-              <a href="../../about/about.html"><li>About</li></a>
-            </ul>
-          </div>
-        </nav>
+  <div class="site-menu" id="siteMenu">
+    <a class="site-menu__link site-menu__link--second" href="../../index.html">
+       <center> <i class="fa fa-home"></i> </center>
+      <p style="font-size: 18px">Home</p>
+    </a>
+    <a class="site-menu__link site-menu__link--second" href="../../about/about.html">
+       <center> <i class="fa fa-user"></i> </center>
+        <p style="font-size: 18px">About</p>
+    </a>
+    <a class="site-menu__link site-menu__link--second" href="../../devices/devices.html">
+       <center> <i class="fa fa-mobile"></i> </center>
+        <p style="font-size: 18px">Devices</p>
+    </a>
+  </div>
+  <div class="site">
+    <div class="navbar">
+      <div class="navbar__logo">KotyaTheCat</div>
+      <div class="navbar__burger" id="menuBtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
       </div>
+    </div>
 <div class="contact_section" id="contact">
     <div class="CONTACT_heading wow jello">
         <div class="CONTACT">Let's Connect and Build Something together.</div>
@@ -50,5 +65,13 @@
       <img src="../../src/img/contact/illustartion_contatc.svg" alt="contact-illustration">
     </div>
 </div>
+    <script src="../../script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+      });
+    </script>
   </body>
 </html>
