@@ -60,6 +60,38 @@ html {
   color: var(--hover-color);
 }
 
+.backbutton {
+  position: fixed;
+  color: white;
+  left: 0.5rem;
+  top: 6.0rem;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-background-clip: text;
+  -webkit-transition: all 0.4s ease 0s;
+ -moz-transition: all 0.4s ease 0s;
+ -o-transition: all 0.4s ease 0s;
+ transition: all 0.4s ease 0s;
+}
+
+.backbutton:hover {
+  color: gray;
+  -webkit-background-clip: text;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: all 0.4s ease 0s;
+ -moz-transition: all 0.4s ease 0s;
+ -o-transition: all 0.4s ease 0s;
+ transition: all 0.4s ease 0s;
+}
+
 .navbar {
   position: sticky;
   color: var(--main-color);
