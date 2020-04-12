@@ -25,10 +25,10 @@ button[type="button"]{
     max-width:100%;
     font-size: 1rem;
     margin:0 auto;
-    margin-left: 6rem;
     text-align: center;
     background: transparent;
     border:2px solid white;
+    margin-left: -1rem;
     }
 
     button[type="button"]:hover{
