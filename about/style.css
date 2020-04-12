@@ -28,7 +28,6 @@ button[type="button"]{
     text-align: center;
     background: transparent;
     border:2px solid white;
-    margin-left: -1rem;
     }
 
     button[type="button"]:hover{
