@@ -48,12 +48,23 @@ a:hover{text-decoration: none;}
     margin: 1.3rem;
 }
 
+.download__btn_blocked{
+display: block;
+margin-top:1rem;
+margin-left: 0rem;
+border-radius:3px;
+background-color:#959596;
+padding:.5rem;
+text-align: center;
+transition:background-color 200ms ease}.device
+
+.download__btn_blocked:hover{background-color:#959596}
+
 .download__btn{
 margin-top:30rem;
 margin-left: 0rem;
 border-radius:100px;
-background-color:#c4c4c4
-padding: 0.5rem;
+background-color:#c4c4c4;
 text-align: center;
 transition:background-color 200ms ease}.device 
 
