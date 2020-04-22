@@ -11,8 +11,12 @@
 
 .portfolio-code{
     display: block;
+    margin: 3rem;
+}
+
+.portfolio-code-download{
+    display: block;
     margin: 0 auto;
-    margin-left: 1rem;
 }
 
 .project_heading-code{
@@ -36,17 +40,6 @@ margin-bottom: 1.3rem;
 }
 
 a:hover{text-decoration: none;}
-
-.portfolio-code:hover{
-    display: block;
-    margin: 0 auto;
-    margin-left: 1rem;
-    box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
-    -webkit-transition: all 0.4s ease 0s;
-    -moz-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-}
 
 .code-work-img{
     display: block;
@@ -81,3 +74,81 @@ border-radius: 30px}.device
 .build__table{overflow-x:scroll}.build__details{width:100%;background-color:#2b2b2b;border:1px solid rgba(34,36,38,.15);box-shadow:none;border-collapse:separate;border-spacing:0;font-size:.9em;overflow-x:scroll}.build__details a{color:#4285f4;text-decoration:underline}.build__details th,.build__details td{padding:.5rem 1rem;text-align:center;border-bottom:1px solid rgba(34,36,38,.1)}
 
 .d__modal h4 a{text-decoration:underline}.d__modal
+
+body {
+  color: #2c3e50;
+  background: #ecf0f1;
+}
+.half {
+  padding: 0 1em;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #1e1e1fad;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: #2980b9;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #1b1b1b;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: #3498db;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+/* Icon */
+.tab label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.tab input[type=checkbox] + label::after {
+  content: "+";
+}
+.tab input[type=radio] + label::after {
+  content: "\25BC";
+}
+.tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+.tab input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
