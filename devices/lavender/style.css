@@ -75,14 +75,10 @@ border-radius: 30px}.device
 
 .d__modal h4 a{text-decoration:underline}.d__modal
 
-body {
-  color: #2c3e50;
-  background: #ecf0f1;
-}
 .half {
   padding: 0 1em;
 }
-/* Acordeon styles */
+
 .tab {
   position: relative;
   margin-bottom: 1px;
