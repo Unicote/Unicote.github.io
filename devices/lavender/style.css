@@ -92,7 +92,7 @@ border-radius: 30px}.device
 
 .tab {
   position: relative;
-  margin-bottom: 1px;
+  margin-bottom: 9px;
   width: 100%;
   color: #fff;
   overflow: hidden;
@@ -115,6 +115,7 @@ border-radius: 30px}.device
   background: #2980b9;
 }
 .tab-content {
+  margin-top: -0.5rem;
   max-height: 0;
   overflow: hidden;
   background: #1b1b1b;
