@@ -111,6 +111,31 @@ border-radius: 30px}.device
   line-height: 3;
   cursor: pointer;
 }
+
+.tab-in-tab {
+  position: relative;
+  margin-bottom: 9px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+.tab-in-tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab-in-tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #2d2d2d;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .blue label {
   background: #2980b9;
 }
@@ -175,3 +200,5 @@ border-radius: 30px}.device
     font-family: Consolas,andale mono wt,andale mono,lucida console,lucida sans typewriter,dejavu sans mono,bitstream vera sans mono,liberation mono,nimbus mono l,Monaco,courier new,Courier,monospace;
     resize: none;
     overflow-y: scroll;
+    margin-top: 1rem;
+}
