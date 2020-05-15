@@ -114,7 +114,10 @@ a:hover{text-decoration: none;}
 
 .line {
     width: 100%;
-    padding: .75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     white-space: pre-line;
     background-color: #181717;
     color: #c4c4c4;
@@ -122,4 +125,9 @@ a:hover{text-decoration: none;}
     font-family: Consolas,andale mono wt,andale mono,lucida console,lucida sans typewriter,dejavu sans mono,bitstream vera sans mono,liberation mono,nimbus mono l,Monaco,courier new,Courier,monospace;
     resize: none;
     margin-top: 1rem;
+}
+
+ ul {
+    margin-top: -0.1rem;
+    margin-bottom: -0.1rem;
 }
