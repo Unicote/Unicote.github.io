@@ -1,6 +1,26 @@
 const jsContainer = document.querySelector("#jsContainer");
 
 const data = [
+  {
+    name: "BuildBot",
+    shortDesc: "Android Build Scripts",
+    githubLink: "https://github.com/KotyaTheCat/BuildBot",
+    liveDemo: "https://github.com/KotyaTheCat/BuildBot#installation",
+    moreInfo:
+      "Android Build Scripts for building custom ROMs",
+    moreInfoPhoto: "../src/img/projects/BuildBot.jpg",
+    skills: ['shell']
+  },
+  {
+    name: "Rom_Extractor-Linux",
+    shortDesc: "Extractor for linux",
+    githubLink: "https://github.com/KotyaTheCat/Rom_Extractor-Linux",
+    liveDemo: "https://github.com/KotyaTheCat/Rom_Extractor-Linux#released-scripts",
+    moreInfo:
+      "Rom extractor for linux",
+    moreInfoPhoto: "../src/img/projects/extrator.png",
+    skills: ['shell', 'python']
+  }
 ];
 
 // rendering containers on site
@@ -15,7 +35,7 @@ function renderData(items) {
       <div class="more-info-photo-background more-info-trigger" ></div>
         <img 
           class="more-info-photo " 
-          src=${moreInfoPhoto}
+          src=${moreInfoPhoto} 
           data-aos="fade-up"
           data-aos-delay="${index * 150}"
           data-aos-offset="-100"
@@ -44,25 +64,49 @@ function renderData(items) {
 
 renderData(data)
 
+const menuBtn = document.querySelector("#menuBtn");
+const siteMenu = document.querySelector("#siteMenu");
+
+// open / close menu
 function toggleMenu() {
   menuBtn.classList.toggle("change");
   siteMenu.classList.toggle("shown");
 }
 
-const menuBtn = document.querySelector("#menuBtn");
-const siteMenu = document.querySelector("#siteMenu");
-
 menuBtn.addEventListener("click", toggleMenu);
 
-// add loader to the site
-window.addEventListener(
-  'load',                                                         // when site is fully loaded
-  () => {
-    document.body.style.overflowY = "auto"
-    const preloader = document.querySelector('.preloader')
-    preloader.classList.add('preloader-finish')                 // add class to the preloader
+function portfolioItem() {
+  // selecting items from site
+  const moreInfoTrigger = document.querySelectorAll(".more-info-trigger");
+  const moreInfoElements = document.querySelectorAll(".more-info");
+  const closeButtons = document.querySelectorAll(".more-info__close");
+
+  // close more info about portfolio item
+  function closeInfo() {
+    moreInfoElements.forEach(element => {
+      element.classList.add("more-info--hidden");
+    });
   }
-)
+
+  closeButtons.forEach(button => {
+    button.addEventListener("click", closeInfo);
+  });
+
+
+  // open more ino about portfolio item
+  moreInfoTrigger.forEach(icon => {
+    icon.addEventListener("click", () => {
+      const moreInfo = icon.parentElement.querySelector(".more-info");
+      closeInfo();
+      moreInfo.classList.remove("more-info--hidden");
+    });
+  });
+}
+
+portfolioItem()
+
+
+
 
 // window height variable for styles
 function setHeightVariable() {
@@ -135,9 +179,10 @@ skillButtons.forEach(button => {
 const navbar = document.querySelector('.navbar')
 
 window.addEventListener('scroll', (e) => {
-  if(window.scrollY > window.innerHeight - 100) {
+  if(window.scrollY > window.innerHeight - 200) {
     navbar.classList.add('navbar--shadow')
   } else (
     navbar.classList.remove('navbar--shadow')
   )
 })
+
