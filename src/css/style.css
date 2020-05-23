@@ -3,14 +3,14 @@
 
  body
  {
-   padding-bottom: 50px;
+   /* padding-bottom: 50px; */
    background: #000;
    font-family: 'Open Sans', sans-serif;
    color: #cdcdcd;
  }
 
 html, body {
-  height: 100%; 
+   /* height: 100%; */
 }
 
 html {
@@ -178,7 +178,7 @@ html {
 }
 
 .site {
-  margin-top: 12rem;
+  margin-top: 11rem;
   justify-content: center;
   height: calc(var(--vh, 1vh) * 80);
   }
