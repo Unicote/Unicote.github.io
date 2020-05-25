@@ -1,112 +1,93 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
-.body{
-  margin-bottom: 2rem;
+.front-end-logos {
+  padding-bottom: 1rem;
+  padding-top:1rem;
+  width:80%;
 }
 
-.front-end-logos{
-    padding-bottom: 1rem;
-    padding-top:1rem;
-    width:80%;
+.front_end_skills {
+   width: 300px;
+   font-family: 'Poppins', sans-serif;
+   -webkit-transition: all 0.4s ease 0s;
+      -moz-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+           transition: all 0.4s ease 0s;
 }
 
-.front_end_skills{
- width:300px;
- font-family: 'Poppins', sans-serif;
- -webkit-transition: all 0.4s ease 0s;
- -moz-transition: all 0.4s ease 0s;
- -o-transition: all 0.4s ease 0s;
- transition: all 0.4s ease 0s;
-
+.front_end_skills:hover {
+  box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
 }
 
-button[type="button"]{
-    color:white;
-    max-width:100%;
-    font-size: 1rem;
-    margin:0 auto;
-    text-align: center;
-    background: transparent;
-    border:2px solid white;
-    }
-
-    button[type="button"]:hover{
-    color:black;
-    background:  white;}
-
-.front_end_skills:hover{
-    box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+.front_skills {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 21px;
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 21px;
 }
 
-.front_skills{
-    padding-top:30px;
-    padding-bottom:30px;
-    padding-left: 21px;
-    font-family: 'Open Sans', sans-serif;
-    padding-right: 21px;
+.skills-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration-color: #fff;
+  padding-bottom: 2rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.skills-heading{
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-    text-decoration-color: #fff;
-    padding-bottom: 2rem;
-    font-family: 'Open Sans', sans-serif;
+.skills_illustration {
+  max-width: 130%;
 }
 
-.skills_illustration{
-    max-width: 130%;
+.downarrow {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-.downarrow{
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-.about-me-para{
-    text-align: justify;
-    font-size: 1.2rem;
-    margin-top:1.5rem;
-    padding:1.5rem;
-    line-height: 2.2rem;
-    -webkit-transition: all 0.4s ease 0s;
- -moz-transition: all 0.4s ease 0s;
- -o-transition: all 0.4s ease 0s;
- transition: all 0.4s ease 0s;
-    font-family: 'Open Sans', sans-serif;
+.about-me-para {
+  text-align: justify;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  line-height: 2.2rem;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-transition: all 0.4s ease 0s;
+     -moz-transition: all 0.4s ease 0s;
+       -o-transition: all 0.4s ease 0s;
+          transition: all 0.4s ease 0s;
 }
 
 
-.about-me-para:hover{
-    box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
-    -webkit-transition: all 0.4s ease 0s;
- -moz-transition: all 0.4s ease 0s;
- -o-transition: all 0.4s ease 0s;
- transition: all 0.4s ease 0s;
+.about-me-para:hover {
+  box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+  -webkit-transition: all 0.4s ease 0s;
+     -moz-transition: all 0.4s ease 0s;
+       -o-transition: all 0.4s ease 0s;
+          transition: all 0.4s ease 0s;
 
 }
 
-.about-me-para-name{
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top:1.5rem;
-    padding:1.5rem;
-    line-height: 2.2rem;
-    -webkit-transition: all 0.4s ease 0s;
- -moz-transition: all 0.4s ease 0s;
- -o-transition: all 0.4s ease 0s;
- transition: all 0.4s ease 0s;
-    font-family: 'Open Sans', sans-serif;
+.about-me-para-name {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  line-height: 2.2rem;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-transition: all 0.4s ease 0s;
+     -moz-transition: all 0.4s ease 0s;
+       -o-transition: all 0.4s ease 0s;
+          transition: all 0.4s ease 0s;
 }
 
 
-.about-me-para-name:hover{
-    box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
-    -webkit-transition: all 0.4s ease 0s;
- -moz-transition: all 0.4s ease 0s;
- }
+.about-me-para-name:hover {
+  box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+  -webkit-transition: all 0.4s ease 0s;
+     -moz-transition: all 0.4s ease 0s;
+}
  
 .portfolio__container {
   background-color: #151515;
@@ -124,8 +105,8 @@ button[type="button"]{
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+     -ms-flex-pack: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -135,15 +116,15 @@ button[type="button"]{
   height: calc(var(--vh, 1vh) * 100);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+     -ms-flex-direction: column;
+         flex-direction: column;
   -webkit-transform: translate(0);
           transform: translate(0);
   background: #151515;
   color: var(--main-color);
   padding: 20px;
   -webkit-transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   pointer-events: all;
 }
 
@@ -160,32 +141,32 @@ button[type="button"]{
 
 #jsContainer .container__item .more-info .more-info__close {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
 }
 
 #jsContainer .container__item .more-info .more-info__header {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
 }
 
 #jsContainer .container__item .more-info .more-info__text {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
 #jsContainer .container__item .more-info .more-info__demo {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
 }
 
 #jsContainer .container__item .more-info .more-info-github {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
 }
 
 #jsContainer .container__item .more-info .more-info-photo-desc {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
 }
 
 #jsContainer .container__item .more-info--hidden {
@@ -193,7 +174,7 @@ button[type="button"]{
           transform: translate(-100vw);
   pointer-events: none;
   -webkit-transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
-  transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
+          transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
 }
 
 #jsContainer .container__item .more-info--hidden .more-info__close,
@@ -209,32 +190,32 @@ button[type="button"]{
 
 #jsContainer .container__item .more-info--hidden .more-info__close {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
 }
 
 #jsContainer .container__item .more-info--hidden .more-info__header {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
 #jsContainer .container__item .more-info--hidden .more-info__text {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
 }
 
 #jsContainer .container__item .more-info--hidden .more-info__demo {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
 }
 
 #jsContainer .container__item .more-info--hidden .more-info-github {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
 }
 
 #jsContainer .container__item .more-info--hidden .more-info-photo-desc {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
 }
 
 #jsContainer .container__item .more-info__close {
@@ -277,7 +258,7 @@ button[type="button"]{
   color: white;
   text-shadow: 1px 1px 4px #474747;
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @media (max-width: 700px) {
@@ -297,7 +278,7 @@ button[type="button"]{
   color: white;
   text-shadow: 1px 1px 4px #474747;
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+          transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @media (max-width: 700px) {
@@ -320,8 +301,8 @@ button[type="button"]{
 #jsContainer .container__item .more-info-photo-desc {
   width: 100vmin;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+   -ms-grid-row-align: center;
+  align-self: center;
 }
 
 #jsContainer .container__item:hover .more-info-photo-title {
@@ -342,5 +323,5 @@ button[type="button"]{
 }
 
 #skills .skill__button {
-color: white;
+  color: white;
 }

@@ -24,8 +24,8 @@ const data = [
   {
     name: "Rock Paper and Scissors",
     shortDesc: "Simple game in JS",
-    githubLink: "https://github.com/KotyaTheCat/KotyaTheCat.github.io/tree/master/projects/rps/",
-    liveDemo: "https://KotyaTheCat.github.io/projects/rps/demo.html",
+    githubLink: "https://github.com/KotyaTheCat/KotyaTheCat.github.io/tree/master/about/projects/rps/",
+    liveDemo: "https://KotyaTheCat.github.io/about/projects/rps/demo.html",
     moreInfo:
       "Simple Rock Paper and Scissors. Based on http://rock-paper-sizor.surge.sh/",
     moreInfoPhoto: "../src/img/projects/rps.png",
