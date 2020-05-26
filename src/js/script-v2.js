@@ -8,7 +8,7 @@ const data = [
     liveDemo: "https://github.com/KotyaTheCat/BuildBot#installation",
     moreInfo:
       "Android Build Scripts for building custom ROMs",
-    moreInfoPhoto: "../src/img/projects/BuildBot.jpg",
+    moreInfoPhoto: "src/img/projects/BuildBot.jpg",
     skills: ['shell']
   },
   {
@@ -18,17 +18,17 @@ const data = [
     liveDemo: "https://github.com/KotyaTheCat/Rom_Extractor-Linux#released-scripts",
     moreInfo:
       "Rom extractor for linux",
-    moreInfoPhoto: "../src/img/projects/extrator.png",
+    moreInfoPhoto: "src/img/projects/extrator.png",
     skills: ['shell', 'python']
   },
   {
     name: "Rock Paper and Scissors",
     shortDesc: "Simple game in JS",
     githubLink: "https://github.com/KotyaTheCat/KotyaTheCat.github.io/tree/master/about/projects/rps/",
-    liveDemo: "https://KotyaTheCat.github.io/about/projects/rps/demo.html",
+    liveDemo: "https://KotyaTheCat.github.io/about/projects/rps/demo",
     moreInfo:
       "Simple Rock Paper and Scissors. Based on http://rock-paper-sizor.surge.sh/",
-    moreInfoPhoto: "../src/img/projects/rps.png",
+    moreInfoPhoto: "src/img/projects/rps.png",
     skills: ['javascript', 'html', 'css']
   }
 ];
