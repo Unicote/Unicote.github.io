@@ -67,3 +67,13 @@ a:hover {
   margin: 1.3rem;
   text-align-last: end;
 }
+
+.site {
+  margin-top: 11rem;
+  justify-content: center;
+  height: calc(var(--vh, 1vh) * 80);
+}
+
+.indentation { 
+   margin-top:70px;
+}

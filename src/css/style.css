@@ -176,9 +176,7 @@ button[type="button"]:hover {
 }
 
 .site {
-  margin-top: 11rem;
   justify-content: center;
-  height: calc(var(--vh, 1vh) * 80);
 }
 
 .site-menu {
@@ -408,6 +406,7 @@ button[type="button"]:hover {
 
 .indentation {
    margin-top:70px;
+   margin-top: 11rem;
 }
 
 #jsContainer {
