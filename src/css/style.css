@@ -3,6 +3,7 @@
 body {
   background: #000;
   color: #cdcdcd;
+  padding-bottom: 50px;
 }
 
 html {
@@ -684,6 +685,10 @@ button[type="button"]:hover {
   cursor: pointer;
 }
 
+.container-op {
+  margin: 35px 0;
+}
+
 #skills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -763,6 +768,23 @@ button[type="button"]:hover {
 
 .indentationhome {
    margin-top: 5rem;
+}
+
+.copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--main-color);
+    font-family: "Fira Code", monospace;
+}
+
+.copyright a {
+    color: var(--main-color);
+    text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */
