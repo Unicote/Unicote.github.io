@@ -1,5 +1,3 @@
-const jsContainer = document.querySelector("#jsContainer");
-
 const data = [
   {
     name: "BuildBot",
@@ -74,22 +72,6 @@ function renderData(items) {
 
 renderData(data)
 
-const menuBtn = document.querySelector("#menuBtn");
-const siteMenu = document.querySelector("#siteMenu");
-
-// open / close menu
-function toggleMenu() {
-  menuBtn.classList.toggle("change");
-  siteMenu.classList.toggle("shown");
-  if(siteMenu.classList.contains("shown")) {
-    document.body.style.overflowY = "hidden"
-  } else {
-    document.body.style.overflowY = "auto"
-  }
-}
-
-menuBtn.addEventListener("click", toggleMenu);
-
 function portfolioItem() {
   // selecting items from site
   const moreInfoTrigger = document.querySelectorAll(".more-info-trigger");
@@ -121,28 +103,6 @@ function portfolioItem() {
 }
 
 portfolioItem()
-
-
-
-
-// window height variable for styles
-function setHeightVariable() {
-  let vh = window.innerHeight * 0.01 - 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-}
-setHeightVariable();
-
-window.addEventListener("resize", setHeightVariable);
-
-// add loader to the site
-window.addEventListener(
-  'load',                                                         // when site is fully loaded
-  () => {
-    document.body.style.overflowY = "auto"
-    const preloader = document.querySelector('.preloader')
-    preloader.classList.add('preloader-finish')                 // add class to the preloader
-  }
-)
 
 // finding skills from data 
 
@@ -193,6 +153,7 @@ skillButtons.forEach(button => {
   })
 })
 
+// navbar shadow
 const navbar = document.querySelector('.navbar')
 
 window.addEventListener('scroll', (e) => {
@@ -202,4 +163,3 @@ window.addEventListener('scroll', (e) => {
     navbar.classList.remove('navbar--shadow')
   )
 })
-
