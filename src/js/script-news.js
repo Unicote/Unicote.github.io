@@ -7,6 +7,11 @@ const siteMenu = document.querySelector("#siteMenu");
 function toggleMenu() {
   menuBtn.classList.toggle("change");
   siteMenu.classList.toggle("shown");
+  if(siteMenu.classList.contains("shown")) {
+    document.body.style.overflowY = "hidden"
+  } else {
+    document.body.style.overflowY = "auto"
+  }
 }
   
 menuBtn.addEventListener("click", toggleMenu);

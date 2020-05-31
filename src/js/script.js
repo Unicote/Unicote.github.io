@@ -3,6 +3,11 @@ const jsContainer = document.querySelector("#jsContainer");
 function toggleMenu() {
   menuBtn.classList.toggle("change");
   siteMenu.classList.toggle("shown");
+  if(siteMenu.classList.contains("shown")) {
+    document.body.style.overflowY = "hidden"
+  } else {
+    document.body.style.overflowY = "auto"
+  }
 }
 
 const menuBtn = document.querySelector("#menuBtn");

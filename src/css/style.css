@@ -749,7 +749,6 @@ button[type="button"]:hover {
   content: "";
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33300000', endColorstr='#b3000000',GradientType=0 );
   overflow:hidden;
-  position: relative;
   width: 80%;
   height: 20%;
 }

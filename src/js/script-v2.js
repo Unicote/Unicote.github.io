@@ -81,6 +81,11 @@ const siteMenu = document.querySelector("#siteMenu");
 function toggleMenu() {
   menuBtn.classList.toggle("change");
   siteMenu.classList.toggle("shown");
+  if(siteMenu.classList.contains("shown")) {
+    document.body.style.overflowY = "hidden"
+  } else {
+    document.body.style.overflowY = "auto"
+  }
 }
 
 menuBtn.addEventListener("click", toggleMenu);
@@ -95,6 +100,7 @@ function portfolioItem() {
   function closeInfo() {
     moreInfoElements.forEach(element => {
       element.classList.add("more-info--hidden");
+      document.body.style.overflowY = "auto"
     });
   }
 
@@ -109,6 +115,7 @@ function portfolioItem() {
       const moreInfo = icon.parentElement.querySelector(".more-info");
       closeInfo();
       moreInfo.classList.remove("more-info--hidden");
+      document.body.style.overflowY = "hidden"
     });
   });
 }
