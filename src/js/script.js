@@ -3,6 +3,8 @@ const jsContainer = document.querySelector("#jsContainer");
 const menuBtn = document.querySelector("#menuBtn");
 const siteMenu = document.querySelector("#siteMenu");
 
+document.body.style.overflowY = "auto"
+
 // open / close menu
 function toggleMenu() {
   menuBtn.classList.toggle("change");

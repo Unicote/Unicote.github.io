@@ -14,7 +14,7 @@
        -o-transition: all 0.4s ease 0s;
           transition: all 0.4s ease 0s;
   padding: 2rem;
-  background-color: #151515;
+  background-color: var(--list-color);
   border-radius: 29px;
 }
 
@@ -31,7 +31,7 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   margin: 1.3rem;
-  color: white;
+  color: var(--main-color);
 }
 
 .code-stuff {

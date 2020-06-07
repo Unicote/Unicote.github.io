@@ -5,12 +5,12 @@
 }
 
 .CONTACT {
-  color: black;
+  color: var(--menu-color);
   font-size: 21px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   padding-top: 10px;
-  background-color: white;
+  background-color: var(--main-color);
   padding-bottom: 10px;
 }
 

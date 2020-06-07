@@ -32,7 +32,7 @@
 }
 
 a {
-  color: white;
+  color: var(--main-color);
 }
 
 a:hover{text-decoration: none;}

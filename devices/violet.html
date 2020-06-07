@@ -4,9 +4,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="" />
 
     <!-- Bootstrap CSS -->
-     <script src="../../src/js/jquery.min.js"></script>
+     <script src="../src/js/jquery.min.js"></script>
       <link rel="stylesheet" href="../src/css/bootstrap.min.css">
       <link rel="stylesheet" href="../src/css/style.css">
       <link rel="stylesheet" href="device_page/style.css">
@@ -23,7 +24,7 @@
 
     <title>KotyaTheCat</title>
   </head>
-   <body style="overflow-y: hidden;">
+   <body class="dark-theme" style="overflow-y: hidden;">
 
   <div class="preloader">
     <div class="loader">
@@ -52,11 +53,14 @@
   <div class="site">
     <div class="navbar">
       <div class="navbar__logo">KotyaTheCat</div>
+       <div class="navbar__theme">
+        <span class="theme-toggle unselectable"><i class="fa fa-adjust"></i></span>
       <div class="navbar__burger" id="menuBtn">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+     </div>
     </div>
     <a class="backbutton" href="../devices"><i class="fa fa-arrow-circle-o-left fa-3x" aria-hidden="true"></i></a>
     <div class="indentation"></div>
@@ -159,6 +163,7 @@
 
 </div>
     <script src="../src/js/script.js"></script>
+    <script type="text/javascript" src="../src/js/theme.js" ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({

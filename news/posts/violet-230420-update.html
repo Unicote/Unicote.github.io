@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,14 +24,14 @@
 
     <title>KotyaTheCat</title>
   </head>
-   <body style="overflow-y: hidden;">
+   <body class="dark-theme" style="overflow-y: hidden;">
 
   <div class="preloader">
     <div class="loader">
       <img src="../../src/img/loader.gif" alt="loader">
     </div>
   </div>
-
+  
   <div class="site-menu" id="siteMenu">
     <a class="site-menu__link site-menu__link--second" href="https://kotyathecat.github.io/">
        <center> <i class="fa fa-home"></i> </center>
@@ -52,11 +53,14 @@
   <div class="site">
     <div class="navbar">
       <div class="navbar__logo">KotyaTheCat</div>
+      <div class="navbar__theme">
+        <span class="theme-toggle unselectable"><i class="fa fa-adjust"></i></span>
       <div class="navbar__burger" id="menuBtn">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+     </div>
     </div>
     <a class="backbutton" href="../../news"><i class="fa fa-arrow-circle-o-left fa-3x" aria-hidden="true"></i></a>
     <div class="indentation"></div>
@@ -74,6 +78,7 @@
     </div>
   </div>
   <script src="../../src/js/script.js"></script>
+  <script src="../../src/js/theme.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({

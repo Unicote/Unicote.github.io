@@ -54,14 +54,10 @@ a:hover {
   margin-top:1rem;
   margin-left: 0rem;
   border-radius:3px;
-  background-color:#959596;
+  background-color: var(--btnblock-color);
   padding:.5rem;
   text-align: center;
   transition:background-color 200ms ease}.device
-
-.download__btn_blocked:hover {
-  background-color: #959596;
-}
 
 .download__btn{
   margin-top: 30rem;
@@ -83,7 +79,7 @@ a:hover {
   margin-top: 3rem;
   margin-bottom: 0rem;
   padding: 1.5rem;
-  background-color:#2D2D2D;
+  background-color: var(--device-color);
   border-radius: 30px
 }.device
 
@@ -99,7 +95,7 @@ a:hover {
   position: relative;
   margin-bottom: 9px;
   width: 100%;
-  color: #fff;
+  color: var(--main-color);
   overflow: hidden;
 }
 .tab input {
@@ -111,7 +107,7 @@ a:hover {
   position: relative;
   display: block;
   padding: 0 0 0 1em;
-  background: #1e1e1fad;
+  background: var(--label-color);
   font-weight: bold;
   line-height: 3;
   cursor: pointer;
@@ -121,7 +117,7 @@ a:hover {
   position: relative;
   margin-bottom: 17px;
   width: 100%;
-  color: #fff;
+  color: var(--main-color);
 }
 .tab-in-tab input {
   position: absolute;
@@ -132,7 +128,7 @@ a:hover {
   position: relative;
   display: block;
   padding: 0 0 0 1em;
-  background: #2d2d2d;
+  background: var(--tit-label-color);
   font-weight: bold;
   line-height: 3;
   cursor: pointer;
@@ -148,7 +144,7 @@ a:hover {
   margin-top: -0.5rem;
   max-height: 0;
   overflow: hidden;
-  background: #1b1b1b;
+  background: var(--content-color);
   -webkit-transition: max-height .35s;
        -o-transition: max-height .35s;
           transition: max-height .35s;
@@ -158,7 +154,7 @@ a:hover {
   margin-top: -1rem;
   max-height: 0;
   overflow: hidden;
-  background: #2f2d2d;
+  background: var(--tit-label-color);
   border-radius: 0px 0px 20px 20px;
   -webkit-transition: max-height .35s;
        -o-transition: max-height .35s;
@@ -218,7 +214,7 @@ a:hover {
   white-space: pre-line;
   height: 100px;
   border-radius: 3px;
-  background-color: #181717;
+  background-color: var(--changelog-color);
   border: none;
   color: #c4c4c4;
   box-shadow: 0 1px 3px 0 #2d2d2d,0 0 0 1px #2d2d2d;

@@ -10,7 +10,7 @@
 
 .portfolio-code {
   padding: 2rem;
-  background-color: #151515;
+  background-color: var(--list-color);
   border-radius: 29px;
   -webkit-transition: all 0.4s ease 0s;
      -moz-transition: all 0.4s ease 0s;
@@ -31,7 +31,7 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   margin: 1.3rem;
-  color: white;
+  color: var(--main-color);
 }
 
 .code-stuff {
@@ -43,7 +43,7 @@
 }
 
 a {
-  color: white;
+  color: var(--main-color);
 }
 
 a:hover {
@@ -68,7 +68,7 @@ a:hover {
   padding:1.5rem;
   line-height: 2.2rem;
   font-family: 'Open Sans', sans-serif;
-  background-color: #1f1f1f;
+  background-color: var(--list-color);
   border-radius: 20px;
   -webkit-transition: all 0.4s ease 0s;
      -moz-transition: all 0.4s ease 0s;
@@ -94,7 +94,7 @@ a:hover {
   padding: 1.5rem;
   line-height: 2.2rem;
   font-family: 'Open Sans', sans-serif;
-  background-color: #1f1f1f;
+  background-color: var(--list-color);
   border-radius: 20px;
   text-align: center;
   -webkit-transition: all 0.4s ease 0s;
@@ -118,7 +118,7 @@ a:hover {
     padding-left: 1rem;
     padding-right: 1rem;
     white-space: pre-line;
-    background-color: #181717;
+    background-color: var(--changelog-color);
     color: #c4c4c4;
     box-shadow: 0 1px 3px 0 #2d2d2d,0 0 0 1px #2d2d2d;
     font-family: Consolas,andale mono wt,andale mono,lucida console,lucida sans typewriter,dejavu sans mono,bitstream vera sans mono,liberation mono,nimbus mono l,Monaco,courier new,Courier,monospace;

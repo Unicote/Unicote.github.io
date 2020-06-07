@@ -1,9 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
 body {
-  background: #000;
+  background: white;
+  color: black;
+  --main-bg-color: white;
+  --main-color: black;
+  --menu-color: white;
+  --list-color: #e6e6e6;
+  --shadow-color: #e6e6e6;
+  --device-color: #e6e6e6;
+  --label-color: #c1c1c1;
+  --content-color: #969696;
+  --tit-label-color: #6f6f6f;
+  --changelog-color: #484747;
+  --btnblock-color: #dcdcdc; 
+}
+
+body.dark-theme {
+  background: black;
   color: #cdcdcd;
-  padding-bottom: 50px;
+  --main-bg-color: black;
+  --main-color: white;
+  --menu-color: black;
+  --list-color: #151515;
+  --shadow-color: #151515;
+  --device-color: #2D2D2D;
+  --label-color: #1e1e1fad;
+  --content-color: #1b1b1b;
+  --tit-label-color: #2D2D2D;
+  --changelog-color: #181717;
+  --btnblock-color: #959596;
 }
 
 html {
@@ -22,18 +48,18 @@ img {
 }
 
 button[type="button"] {
-  color: white;
+  color: var(--main-color);
   max-width: 100%;
   font-size: 1rem;
   margin: 0 auto;
   text-align: center;
   background: transparent;
-  border: 2px solid white;
+  border: 2px solid var(--main-color);
 }
 
 button[type="button"]:hover {
-  color: black;
-  background: white;
+  color: var(--main-color);
+  background: var(--shadow-color);
 }
 
 :root {
@@ -61,7 +87,7 @@ button[type="button"]:hover {
 
 .backbutton {
   position: fixed;
-  color: white;
+  color: var(--main-color);
   left: 0.5rem;
   top: 6.0rem;
   z-index: 10;
@@ -92,7 +118,6 @@ button[type="button"]:hover {
 
 .navbar {
   position: fixed;
-  color: var(--main-color);
   left: 0;
   top: 0;
   z-index: 10;
@@ -106,13 +131,16 @@ button[type="button"]:hover {
      -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  background-color: #151515;
   transition: 0.3s;
 }
   
 .navbar__logo {
   padding: 20px;
   font-size: 20px;
+}
+
+.navbar__theme {
+  display: flex;
 }
 
 .navbar__burger {
@@ -124,10 +152,10 @@ button[type="button"]:hover {
 .navbar__burger .bar1,
 .navbar__burger .bar2,
 .navbar__burger .bar3 {
+  background-color: var(--main-color);
   width: 40px;
   height: 5px;
   border-radius: 2.5px;
-  background-color: var(--main-color);
   margin: 6px 0;
   -webkit-transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
   transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
@@ -172,9 +200,28 @@ button[type="button"]:hover {
 .navbar--shadow {
   -webkit-box-shadow: 0px -29px 46px 6px #888888;
           box-shadow: 0px -29px 46px 6px #888888;
-  background-color: #000000;
+  background-color: var(--shadow-color);
   position: fixed;
 }
+
+.theme-toggle {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+  cursor: pointer;
+  font-size: 25px;
+  }
+  
+.theme-toggler {
+  fill:currentColor
+  }
+.unselectable {
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none
+  }
 
 .site {
   justify-content: center;
@@ -182,13 +229,13 @@ button[type="button"]:hover {
 
 .site-menu {
   position: fixed;
-  color: var(--main-color);
+  color: var(--menu-color);
   top: 0;
   z-index: 4;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--nav-bg-color);
+  background: var(--menu-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,7 +530,7 @@ button[type="button"]:hover {
          flex-direction: column;
   -webkit-transform: translate(0);
           transform: translate(0);
-  background: var(--main-bg-color);
+  background: var(--main-color);
   color: var(--main-color);
   padding: 20px;
   -webkit-transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
@@ -709,7 +756,7 @@ button[type="button"]:hover {
   padding: 10px;
   padding: 10px;
   margin: 5px;
-  background: transparent;
+  background: #bfbfbf;
   border: none;
   border-radius: 4px;
   font-size: 20px;
@@ -732,7 +779,7 @@ button[type="button"]:hover {
 }
     
 .list {
-  background-color: #151515;
+  background-color: var(--list-color);
   padding: 20px 0;
 }
     
@@ -779,6 +826,7 @@ button[type="button"]:hover {
     width: 100%;
     color: var(--main-color);
     font-family: "Fira Code", monospace;
+    padding-bottom: 50px;
 }
 
 .copyright a {

@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- Bootstrap CSS -->
@@ -25,7 +26,7 @@
 
     <title>KotyaTheCat</title>
   </head>
-   <body style="overflow-y: hidden;">
+   <body class="dark-theme" style="overflow-y: hidden;">
 
   <div class="preloader">
     <div class="loader">
@@ -55,11 +56,14 @@
   <div class="site">
     <div class="navbar">
       <div class="navbar__logo">KotyaTheCat</div>
+      <div class="navbar__theme">
+        <span class="theme-toggle unselectable"><i class="fa fa-adjust"></i></span>
       <div class="navbar__burger" id="menuBtn">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
+     </div>
     </div>
     <div class="container">
         <div class="header">
@@ -67,7 +71,7 @@
         <div class="col-12 col-md-6 order-md-2">
           <img src="src/img/KotyaTheCat.png" alt="" class="profile-pic">
         </div>
-        <div class="col-12 col-md-6 order-md-1"><div class="name">Hey, I'm KotyaTheCat</div>
+        <div class="col-12 col-md-6 order-md-1"><div class="name">Hey, I'm KotyaTheCat </div>
         <div class="about-me">a custom-rom developer</div>
         <div>
             <a href="http://instagram.com/kotyathecat7" target="_blank"><img src="src/img/social/instagram.png" alt="" class="socialmedia"></a>
@@ -94,6 +98,7 @@
   </div>
   <script src="src/js/script.js"></script>
   <script src="src/js/home.js"></script>
+  <script type="text/javascript" src="src/js/theme.js" ></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
