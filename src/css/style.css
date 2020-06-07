@@ -374,7 +374,7 @@ button[type="button"]:hover {
   top: 0;
   opacity: 1;
   position: fixed;
-  background-color: black;
+  background-color: var(--main-bg-color);
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
