@@ -7,7 +7,7 @@ const data = [
     moreInfo:
       "Android Build Scripts for building custom ROMs",
     moreInfoPhoto: "src/img/projects/BuildBot.jpg",
-    skills: ['shell']
+    skills: ['all', 'shell']
   },
   {
     name: "Rom_Extractor-Linux",
@@ -17,7 +17,7 @@ const data = [
     moreInfo:
       "Rom extractor for linux",
     moreInfoPhoto: "src/img/projects/extrator.png",
-    skills: ['shell', 'python']
+    skills: ['all', 'shell', 'python']
   },
   {
     name: "Rock Paper and Scissors",
@@ -27,7 +27,7 @@ const data = [
     moreInfo:
       "Simple Rock Paper and Scissors. Based on http://rock-paper-sizor.surge.sh/",
     moreInfoPhoto: "src/img/projects/rps.png",
-    skills: ['javascript', 'html', 'css']
+    skills: ['all', 'javascript', 'html', 'css']
   }
 ];
 
