@@ -40,10 +40,9 @@ function renderData(items) {
     const { name, shortDesc, liveDemo, githubLink, moreInfo, moreInfoPhoto } = element;
     jsContainer.innerHTML += `
       <div class="container__item" >
-      <div class="more-info-photo-background more-info-trigger" ></div>
         <img 
-          class="more-info-photo " 
-          src=${moreInfoPhoto} 
+          class="more-info-photo more-info-photo-background more-info-trigger" 
+          src=${moreInfoPhoto}
           data-aos="fade-up"
           data-aos-delay="${index * 150}"
           data-aos-offset="-100"
@@ -51,7 +50,7 @@ function renderData(items) {
         <div class="more-info-photo-title">${name}</div>
         <div class="more-info-photo-title2">${shortDesc}</div>
         
-        <div class="more-info more-info--hidden">
+          <div class="more-info more-info--hidden">
           <div class="more-info__close">X</div>
           <h1 class="more-info__header">${name}</h1>
           
@@ -85,7 +84,7 @@ function portfolioItem() {
       document.body.style.overflowY = "auto"
     });
   }
-
+  
   closeButtons.forEach(button => {
     button.addEventListener("click", closeInfo);
   });
@@ -104,7 +103,7 @@ function portfolioItem() {
 
 portfolioItem()
 
-// finding skills from data 
+// finding skills from data
 
 function findSkills(list) {
   return list.reduce((result, element) => {

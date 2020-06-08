@@ -295,7 +295,8 @@
   top: 0;
   left: 0;
   position: absolute;
-  z-index: 4;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 #jsContainer .container__item .more-info-photo-desc {

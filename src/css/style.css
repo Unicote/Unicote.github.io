@@ -735,6 +735,17 @@ button[type="button"]:hover {
           transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
 }
 
+#jsContainer .container__item .more-info-photo-background {
+    /* background-color: var(--hover-color); */
+    /* width: 100%; */
+    /* height: 100%; */
+    opacity: 0;
+    top: 0;
+    left: 0;
+    /* position: absolute; */
+    z-index: 4;
+}
+
 #jsContainer .container__item .more-info__close {
   position: absolute;
   top: 10px;
@@ -804,17 +815,6 @@ button[type="button"]:hover {
   }
 }
 
-#jsContainer .container__item .more-info-photo-background {
-  background-color: var(--hover-color);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 4;
-}
-
 #jsContainer .container__item .more-info-photo-desc {
   width: 100vmin;
   -ms-flex-item-align: center;
@@ -832,11 +832,6 @@ button[type="button"]:hover {
   opacity: 1;
   -webkit-transform: translateX(-50%) translateY(0);
           transform: translateX(-50%) translateY(0);
-}
-
-#jsContainer .container__item:hover .more-info-photo-background {
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 .container-op {
