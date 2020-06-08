@@ -900,6 +900,7 @@ button[type="button"]:hover {
   overflow:hidden;
   width: 80%;
   height: 20%;
+  max-width: 1000px;
 }
 
 .listpage img {
