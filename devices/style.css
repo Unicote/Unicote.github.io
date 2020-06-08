@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
+.violet {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
 .code-work {
   font-size: 1.7rem;
   text-align: center;
