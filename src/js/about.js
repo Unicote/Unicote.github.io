@@ -156,7 +156,7 @@ skillButtons.forEach(button => {
 const navbar = document.querySelector('.navbar')
 
 window.addEventListener('scroll', (e) => {
-  if(window.scrollY > window.innerHeight - 800) {
+  if(window.scrollY > window.innerHeight - 180) {
     navbar.classList.add('navbar--shadow')
   } else (
     navbar.classList.remove('navbar--shadow')

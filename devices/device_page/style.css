@@ -245,20 +245,20 @@ a:hover {
 }
 
 .copyright-devices {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
-    color: var(--main-color);
-    font-family: "Fira Code", monospace;
-    padding-bottom: 50px;
-    padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  color: var(--main-color);
+  font-family: "Fira Code", monospace;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .copyright-devices a {
-    color: var(--main-color);
-    text-decoration: none;
+  color: var(--main-color);
+  text-decoration: none;
 }
