@@ -31,20 +31,20 @@
 
 @media(max-width:769px) {
 
-    .CONTACT_heading {
-      background: #000;
-      COLOR: WHITE;
-      text-align: center;
-      margin: 0 auto;
-      max-width: 90%;
+  .CONTACT_heading {
+    background: #000;
+    COLOR: WHITE;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
   }
 
-    .CONTACT {
-      font-size: 1rem;
+  .CONTACT {
+    font-size: 1rem;
   }
 
   .hello {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }

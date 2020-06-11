@@ -71,7 +71,6 @@ a:hover {
 .site {
   margin-top: 11rem;
   justify-content: center;
-  height: calc(var(--vh, 1vh) * 80);
 }
 
 .indentation { 

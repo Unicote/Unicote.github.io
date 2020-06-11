@@ -119,7 +119,7 @@ a:hover {
     padding-right: 1rem;
     white-space: pre-line;
     background-color: var(--changelog-color);
-    color: #c4c4c4;
+    color: var(--text-changelog-color);
     box-shadow: 0 1px 3px 0 #2d2d2d,0 0 0 1px #2d2d2d;
     font-family: Consolas,andale mono wt,andale mono,lucida console,lucida sans typewriter,dejavu sans mono,bitstream vera sans mono,liberation mono,nimbus mono l,Monaco,courier new,Courier,monospace;
     resize: none;

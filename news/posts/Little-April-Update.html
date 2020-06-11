@@ -54,8 +54,14 @@
   <div class="site">
     <div class="navbar">
       <div class="navbar__logo">KotyaTheCat</div>
-      <div class="navbar__theme">
-        <span class="theme-toggle unselectable"><i class="fa fa-adjust"></i></span>
+        <div class="switch-wrapper">
+          <div class="sun"></div>
+          <div class="toggle-wrapper">
+            <input id="switch" type="checkbox" />
+            <label for="switch" id="toggle">Toggle</label>
+          </div>
+          <div class="moon"></div>
+        </div>
       <div class="navbar__burger" id="menuBtn">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -83,6 +89,10 @@ The list of changes is small, but it took a lot of time. I will further develop 
       </div>
       </div>
     </div>
+  </div>
+  <div class="container-op"></div>
+  <div class="copyright">
+      By&nbsp;<a href="about">Kotya Agapkin, 2020</a>
   </div>
   <script src="../../src/js/script.js"></script>
   <script src="../../src/js/theme.js"></script>

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="news/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico" />
@@ -55,8 +55,14 @@
   <div class="site">
     <div class="navbar">
       <div class="navbar__logo">KotyaTheCat</div>
-      <div class="navbar__theme">
-        <span class="theme-toggle unselectable"><i class="fa fa-adjust"></i></span>
+        <div class="switch-wrapper">
+          <div class="sun"></div>
+          <div class="toggle-wrapper">
+            <input id="switch" type="checkbox" />
+            <label for="switch" id="toggle">Toggle</label>
+          </div>
+          <div class="moon"></div>
+        </div>
       <div class="navbar__burger" id="menuBtn">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -82,24 +88,6 @@
                           <a href="news/posts/build_android_from_sources">
                           <div class="portfolio-code">
                          <div class="project_heading-code">Build Android from sources [RU]<div class="date">10.05.2020</div></div>
-                         <p class="code-stuff"></p>
-                      </div>
-                      <div class="indentation"></div>
-                    </a>
-
-                        <div class="posts">
-                          <a href="news/posts/violet-240420-update">
-                          <div class="portfolio-code">
-                         <div class="project_heading-code">violet: New build Evolution X 4.20.2 available!<div class="date">24.04.2020</div></div>
-                         <p class="code-stuff"></p>
-                      </div>
-                      <div class="indentation"></div>
-                    </a>
-
-                        <div class="posts">
-                          <a href="news/posts/violet-230420-update">
-                          <div class="portfolio-code">
-                         <div class="project_heading-code">violet: Evolution X 4.20.2 available!<div class="date">23.04.2020</div></div>
                          <p class="code-stuff"></p>
                       </div>
                       <div class="indentation"></div>
