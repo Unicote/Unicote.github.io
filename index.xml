@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Maestro Creativescape</copyright>
-    <lastBuildDate>Mon, 21 Oct 2019 19:33:00 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2020 12:29:41 +0800</lastBuildDate>
     
 	<atom:link href="https://baalajimaestro.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kernel For Newbies</title>
+      <link>https://baalajimaestro.me/posts/kernel-for-newbies/</link>
+      <pubDate>Tue, 07 Jul 2020 12:29:41 +0800</pubDate>
+      
+      <guid>https://baalajimaestro.me/posts/kernel-for-newbies/</guid>
+      <description>Lets gear up with the necessary things. You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space. If you don’t match the specs, don’t worry, we can workaround it. And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies.</description>
+    </item>
     
     <item>
       <title>New Bug Tracker</title>
@@ -67,9 +76,9 @@ Red Hat is the global leader in open source software solutions — and has a cle
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://baalajimaestro.me/about/</guid>
-      <description>I am Baalaji Balasubramani, a 20 year old, popularly known around the internet world as baalajimaestro.
-I work on Telegram UserBot and other opensource projects found on my GitHub.
-I dualboot ArchLinux alongside Windows 10 (only for games xd). For programming, I use Python 3.7 as my primary choice. I can also code in C, C++, Java, Javascript, PHP, HTML5, CSS3. I am looking forward to learning Go and Rust. I use Bash Scripting to automate all tasks.</description>
+      <description>I am Baalaji Balasubramani, a 21 year old, popularly known around the internet world as baalajimaestro.
+I work on a lot of opensource projects, you can find them all on my GitHub!
+I was using Linux as a primary OS for 4 years, and now I switched to WSL2, and nuked the dual boot, seems a lot better. I will not be writing a review about WSL2, rather I could say it does suit my needs!</description>
     </item>
     
     <item>
@@ -78,7 +87,7 @@ I dualboot ArchLinux alongside Windows 10 (only for games xd). For programming, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://baalajimaestro.me/contact/</guid>
-      <description>I would be available on Telegram almost all time except my sleep xD. Best would be ping me there for anything. If you don&amp;rsquo;t have Telegram, no problemo, you can reach me out on Instagram. For any formal correspondence, Email which has become too formal: [baalajimaestro@computer4u.com](mailto: baalajimaestro@computer4u.com)</description>
+      <description>I would be available on Telegram almost all time except my sleep. You can DM me on telegram, provided you covey your information concisely and readably, rather than sending a dumb hi and expecting me to respond on it. If you don&amp;rsquo;t have Telegram, no problems, you can ping me on discord(baalajimaestro#8313), or my mail [me@baalajimaestro.me](mailto: me@baalajimaestro.me). I respond to my mail within the same day usually.</description>
     </item>
     
   </channel>

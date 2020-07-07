@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Lets gear up with the necessary things. You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space. If you don’t match the specs, don’t worry, we can workaround it. And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies." />
+<meta name="keywords" content="homepage, blog programming" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://baalajimaestro.me/posts/kernel-for-newbies/" />
+
+
+    <title>
+        
+            Kernel For Newbies :: baalajimaestro 
+        
+    </title>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" crossorigin="anonymous" />
+
+
+
+
+<link rel="stylesheet" href="/main.dede02da9537a98158079c023e83573e18127834838ef08172acce888341a797.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Kernel For Newbies">
+<meta itemprop="description" content="Lets gear up with the necessary things. You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space. If you don’t match the specs, don’t worry, we can workaround it. And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies.">
+<meta itemprop="datePublished" content="2020-07-07T12:29:41&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-07T12:29:41&#43;08:00" />
+<meta itemprop="wordCount" content="1328">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Kernel For Newbies"/>
+<meta name="twitter:description" content="Lets gear up with the necessary things. You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space. If you don’t match the specs, don’t worry, we can workaround it. And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-07-07 12:29:41 &#43;0800 &#43;0800" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ baalajimaestro</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://baalajimaestro.me/about">about me</a></li><li><a href="https://builds.baalajimaestro.me">builds</a></li><li><a href="https://bugtracker.baalajimaestro.me">bugtracker</a></li><li><a href="https://baalajimaestro.me/posts">posts</a></li><li><a href="https://baalajimaestro.me/contact">contact</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>7 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://baalajimaestro.me/posts/kernel-for-newbies/">Kernel For Newbies</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p>Lets gear up with the necessary things.
+You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space.
+If you don’t match the specs, don’t worry, we can workaround it.
+And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies. For deps, just check out akhilnarang/scripts</p>
+<p>Lets jump into the what it is to compile a kernel. So, you have seen a developer sending fancy kernel zips for you, you wanna make your own kernel, with your name stamped on it? Well, that’s too easy than you think.</p>
+<p>A bit of terminologies………</p>
+<p>Since we aren’t compiling a phone kernel inside a phone, you need a cross-compiler.</p>
+<p><strong>What is cross compiler now?</strong>
+A cross compiler is a compiler capable of creating executable code for a platform other than the one on which the compiler is running. For example, a compiler that runs on a Linux amd64 but generates code that runs on Android smartphone (aarch64) is a cross compiler.</p>
+<p><strong>What is aarch64?</strong></p>
+<p>That’s the common architecture for all android smartphones today. Well, there is an aarch32 but, that’s too old to be considered in current age.</p>
+<p><strong>So, where do I get a damn cross-compiler, I googled, I cant find it.</strong></p>
+<p><a href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads">https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads</a></p>
+<p>Go to this link, and grab the toolchain AArch64 GNU/Linux target and is x86_64 host.
+Just use some common sense, they are right there visible on that site. They are updated regularly, so be sure to check them out once in a while.</p>
+<p>Ok, I have the toolchains, what more?
+Can I compile?</p>
+<p>Oh yes, you can almost compile now, did you clone the sources?
+Probably look at your OEM code or someone’s code you wanna compile. Clone the sources fully with git.</p>
+<p>Next steps, just few path changes, and finally we can hit the compile</p>
+<blockquote>
+<p><strong>A toolchain prefix is what all files on that dir start with. Like <code>aarch64-linux-gnu-***</code> The first part will remain almost constant. Remember the hyphen. You need to add it.</strong></p>
+</blockquote>
+<p>Cd to the directory where you have the cross-compiler, and then run this.</p>
+<p><code>export CROSS_COMPILE=$(pwd)/bin/&lt;toolchain_prefix&gt;-</code></p>
+<p>Since you aren’t building a kernel for your PC, tell that to the kernel buildsystem
+export ARCH=arm64 &amp;&amp; export SUBARCH=arm64
+This tells that you are building for arm64 architecture.</p>
+<p>Find the defconfig to build.</p>
+<blockquote>
+<p><strong>The defconfig is, in simple terms, a file containing a lot of switches and configurations that your kernel build will read and work out the binary. If you donno anything, better don’t mess with it.</strong></p>
+</blockquote>
+<p>All the defconfigs are located at arch/arm64/configs/xxxxx_defconfig
+You need to find which defconfig your OEM/the other person used. Use your common sense again.</p>
+<p>Next:
+The glorious make.</p>
+<p><code>make O=out &lt;defconfig_name&gt;</code></p>
+<p>and then
+<code>make O=out -j$(nproc)</code></p>
+<p>Wait for a while, it takes around 1min-1hr depending on your system specs.
+If those commands succeed, you will have an Image, Image-dtb, Image.gz, or Image.gz-dtb file at the end. They will be usually at <code>out/arch/arm64/boot/Image.gz-dtb</code> or accordingly.</p>
+<p>Assuming you were able to compile the kernel successfully, you now need to flash it!</p>
+<p>How do I make a dtb into zip? Rename?
+No! That’s not how you do it.
+Add this dtb file to the root dir of the cloned anykernel3
+<a href="https://github.com/osm0sis/anykernel3">https://github.com/osm0sis/anykernel3</a>
+Get to the anykernel.sh and use a bit of common sense. That’s all. Your flashable zip must be ready.</p>
+<p>What’s next:</p>
+<p><strong>Upstreaming CAF:</strong></p>
+<p>If your device has a qualcomm snapdragon processor, then sure it has CAF support. CAF is known for improving performance and other stuff with their patches.</p>
+<p><strong>What all can you grab?</strong></p>
+<p>Generally people grab QCACLD-3.0 and Techpack. You may also merge their own kernel repos. It contains a bit more latest patches than what your OEM would have shipped.</p>
+<p><strong>How should I merge?</strong>
+Merging CAF requires tags. They aren’t normal repos with branches. They are tagged so that you can fetch a specific tag at any point.
+Lets say your processor is Snapdragon 660. Look up for its codename(google), its sdm660.
+If you wanna know the latest tag for your processor checkout this link: https://t.me/CAFReleases
+Just use telegram’s search button and search for your processor.</p>
+<p>Mind it these are all tagged with android versions. If you use a kernel that’s Pie and merge a CAF tag of android 10, you might be ending with 420 conflicts, not kidding.</p>
+<ul>
+<li>You need to get some patience looking for your tag, as usual</li>
+<li>Get here, <a href="https://source.codeaurora.org/quic/la/">https://source.codeaurora.org/quic/la/</a></li>
+<li>You will find kernel/msm-4.4, 4.9, 4.14 and a bunch others</li>
+<li>According to whats yours, copy that link</li>
+<li>Then its a usual git merge!</li>
+<li>git pull <a href="https://source.codeaurora.org/quic/la/kernel/msm-4.4/">https://source.codeaurora.org/quic/la/kernel/msm-4.4/</a> {YOUR TAG}</li>
+<li>And boom! Again conflicts! Again resolution!</li>
+</ul>
+<p><strong>QCACLD Upstreaming</strong></p>
+<p>Just look out which android is your OEM/other developer using it on. Because Pie tags can work on 10 while the other way round wont.
+You found the tag name, so get to your terminal and follow a few steps.</p>
+<p>From LKN chat in telegram,
+Initial merge:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add qcacld-3.0 https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0
+git fetch qcacld-3.0 &lt;TAG&gt;
+git merge -s ours --no-commit --allow-unrelated-histories FETCH_HEAD
+git read-tree --prefix<span style="color:#f92672">=</span>drivers/staging/qcacld-3.0 -u FETCH_HEAD
+git commit
+</code></pre></div><p><strong>Updating to a newer tag</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch qcacld-3.0 &lt;TAG&gt;
+git merge -X subtree<span style="color:#f92672">=</span>drivers/staging/qcacld-3.0 FETCH_HEAD
+Repeat the above <span style="color:#66d9ef">for</span> 
+qca-wifi-host-cmn  and fw-api as well.
+qcacld-3.0 source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0
+fw-api source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api
+qca-wifi-host-cmn source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn
+</code></pre></div><p>If you happen to have some merge conflicts, just understand its some bunch of C code, you can understand the logic and figure it out.</p>
+<p>Well, techpack of 4.14 too follows similar scheme as you did for the qcacld.
+The repos you need to lookout for are audio-kernel and data-kernel</p>
+<p><strong>Linux Upstream</strong></p>
+<p><strong>Why upstream?</strong>:</p>
+<p>Upstreaming Linux helps you patch some critical vulnerabilities that might have been spotted after the kernel was released.
+The point releases like 4.14.170, 171, indicate some vulnerability or performance or maybe even some driver fixes.
+They dont usually add major changes.</p>
+<p><strong>How to upstream?</strong>:
+Linux upstream can be done from three different places as of now.
+<a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git">https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git</a>
+<a href="https://android.googlesource.com/kernel/common/+refs">https://android.googlesource.com/kernel/common/+refs</a>
+<a href="https://github.com/android-linux-stable/">https://github.com/android-linux-stable/</a></p>
+<p><strong>What is the diff?</strong>
+Kernel/common is done by the same person who deals with merges on kernel.org git.
+Its adapted for android, if you want the bleeding edge patches working perfectly on android you need to head right here.</p>
+<p><strong>Android-Linux-Stable:</strong></p>
+<p>This has both CAF patches and Linux stable merged. It’s a sweet spot for laziness. Go checkout their readme for more: <a href="https://github.com/android-linux-stable/notes/tree/master/trees">https://github.com/android-linux-stable/notes/tree/master/trees</a></p>
+<p>Merging any of these is bound to introduce a git conflict. Have fun resolving them.</p>
+<p><strong>Upstreaming your kernel with ASB:</strong></p>
+<p>What&rsquo;s android security patch doing in kernels?</p>
+<ul>
+<li>
+<p>Well, Google releases security patches every month, and we know that, there&rsquo;s nothing new about it.
+But they also fix some vulnerabilities they found on their Pixel Kernel. You can merge them up, showing off to your users that
+security is maxxed (Bootloader unlocked, so nothing is safe)</p>
+</li>
+<li>
+<p>So lets get started.</p>
+</li>
+<li>
+<p>Go to Google kernel/common, if you forgot/donno what it is. Its here <a href="https://android.googlesource.com/kernel/common/">https://android.googlesource.com/kernel/common/</a></p>
+</li>
+<li>
+<p>Browse its tags, not branches!</p>
+</li>
+<li>
+<p>Look for the ASB-2020-01-05-{kernel-version}-{android-version}</p>
+</li>
+<li>
+<p>By android version, it means your kernel&rsquo;s base android version.</p>
+</li>
+<li>
+<p>Dont randomly pick an android q patch over android p kernel base. Thats not gonna work!</p>
+</li>
+<li>
+<p>Now for merging the tag!</p>
+</li>
+<li>
+<p>git pull <a href="https://android.googlesource.com/kernel/common/">https://android.googlesource.com/kernel/common/</a> {your tag you discovered}</p>
+</li>
+<li>
+<p>Its gonna throw a real bunch of conflicts, use some C knowledge and common sense to resolve them.</p>
+</li>
+</ul>
+<p><strong>Building with Clang:</strong></p>
+<p>Clang is an LLVM C/C++/Objective-C compiler, which means, its basically just another C compiler. But whats so special about clang? Its faster!
+When you compile 1million files, a bump of few ms on each file, bumps the whole process by minutes.</p>
+<p><strong>Can every kernel build on clang?</strong>
+Yes, as long as your kernel is above 3.18
+Do I need to do something to make it support?
+Grab a clang-patchset from <a href="https://github.com/nathanchance/android-kernel-clang">https://github.com/nathanchance/android-kernel-clang</a>
+Checkout the branches and decide which one you need.</p>
+<p>4.14 and above natively support clang. You don’t need to mess with your source.</p>
+<p>Have fun hacking!</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1328 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-07-07 04:29 &#43;0000</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://baalajimaestro.me/posts/bugtracker/">
+                                <span class="button__text">New Bug Tracker</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span>Maestro Creativescape</span>
+            <span> <a href="https://baalajimaestro.me/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149264131-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+    </body>
+</html>
