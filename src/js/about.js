@@ -69,7 +69,9 @@ function renderData(items) {
   });
 }
 
-renderData(data)
+if(jsContainer) {
+  renderData(data)
+}
 
 function portfolioItem() {
   // selecting items from site
