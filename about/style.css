@@ -61,7 +61,7 @@
 
 
 .about-me-para:hover {
-  box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+  box-shadow: 0px 15px 30px rgb(255 255 255 / 30%);
   -webkit-transition: all 0.4s ease 0s;
      -moz-transition: all 0.4s ease 0s;
        -o-transition: all 0.4s ease 0s;
@@ -80,11 +80,14 @@
      -moz-transition: all 0.4s ease 0s;
        -o-transition: all 0.4s ease 0s;
           transition: all 0.4s ease 0s;
+  box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+  -webkit-transition: all 0.4s ease 0s;
+     -moz-transition: all 0.4s ease 0s;
 }
 
 
 .about-me-para-name:hover {
-  box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+  box-shadow: 0px 11px 30px rgba(77, 87, 222, 0.3);
   -webkit-transition: all 0.4s ease 0s;
      -moz-transition: all 0.4s ease 0s;
 }
@@ -408,7 +411,7 @@
 
 #skills .skill__button:hover {
   color: white;
-  background: var(--hover-color);
+  background-color: var(--btn-about);
   cursor: pointer;
 }
 
@@ -418,5 +421,18 @@
 
 #skills .skill__button--active {
   color: white;
-  background: var(--hover-color);
+  background-color: var(--btn-about);
+}
+
+.btn-prm {
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  border-color: var(--main-color);
+  padding-inline: 2rem;
+  margin-top: 1rem
+}
+
+.btn:hover {
+  color: var(--main-color);
+  text-decoration: none;
 }

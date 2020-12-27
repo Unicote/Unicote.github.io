@@ -14,15 +14,10 @@
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="stylesheet" href="devices/style.css">
+    <link rel="stylesheet" href="devices/fonts.css">
     <link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico" />
 
-<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <title>KotyaTheCat</title>
+    <title>Unicote</title>
   </head>
    <body class="dark-theme" style="overflow-y: hidden;">
 
@@ -34,7 +29,7 @@
   </div>
 
   <div class="site-menu" id="siteMenu">
-    <a class="site-menu__link site-menu__link--second" href="https://kotyathecat.github.io/">
+    <a class="site-menu__link site-menu__link--second" href="index">
        <center> <i class="fa fa-home"></i> </center>
       <p style="font-size: 18px">Home</p>
     </a>
@@ -54,7 +49,7 @@
 
   <div class="site">
     <div class="navbar">
-      <div class="navbar__logo">KotyaTheCat</div>
+      <div class="navbar__logo">Unicote</div>
         <div class="switch-wrapper">
           <div class="sun"></div>
           <div class="toggle-wrapper">
@@ -72,46 +67,97 @@
     </div>
     <div class="indentation"></div>
     <div class="container">
-                <div class="projects" id="projects">
-                  <div class="h1 code-work">Devices</div>
-                    <div class="container">
-                      <div class="row">
+    
+    <div class="main__inner wrap">
+     <div class="devices__wrap">
+      <div class="devices__header">
+       <h3 class="devices__title">Devices</h3>
+      </div>
+       <div class="alldevices__wrap">
+        <ul class="brands__list" id="brands">
+         <li class="brand_list_item selected" data-brand="Xiaomi"><a href="#">Xiaomi</a></li>
+        </ul><select class="selectnav" id="selectnav1"><option value="https://unicote.github.io/devices#" selected="selected">Xiaomi</option></select>
 
-                        <div class="col violet">
-                          <a href="devices/violet">
-                          <div class="portfolio-code">
-                         <img width="350px" height="334px" src="src/img/devices/violet.png" class="code-work-img">
-                         <div class="project_heading-code">Redmi Note 7 Pro</div>
-                         <p class="code-stuff">violet</p>
-                      </div>
-                    </a>
-                        </div>
+    <div class="brand__items brand__hidden" data-brand="Xiaomi" style="display: block;">
+     <h3 class="brand__select"></h3>
+      <div class="brand__devices">
 
-                        <div class="col">
-                          <a href="devices/lavender">
-                          <div class="portfolio-code">
-                         <img width="350px" height="334px" src="src/img/devices/lavender.png" class="code-work-img">
-                         <div class="project_heading-code">Redmi Note 7</div>
-                         <p class="code-stuff">lavender</p>
-                      </div>
-                    </a>
-                        </div>
+       <a class="bdevice__item" href="devices/surya">
+        <img src="src/img/devices/surya.png" class="device__preview" alt="">
+         <div class="device__data">
+          <h3 class="devicename">Poco X3 (surya)</h3>
+           <h4 class="lupdated">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8">
+             <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+            </svg>
+             Latest build: <span>2020/*/*</span>
+           </h4>
+           <h4 class="version_info">
+           <i class="material-icons">info</i>
+            Versions: <span>10</span>
+           </h4>
+         </div>
+       </a>
+       
+       <a class="bdevice__item" href="devices/violet">
+        <img src="src/img/devices/violet.png" class="device__preview" alt="">
+         <div class="device__data">
+          <h3 class="devicename">Redmi Note 7 Pro (violet)</h3>
+           <h4 class="lupdated">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8">
+             <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+            </svg>
+             Latest build: <span>2020/05/15</span>
+           </h4>
+           <h4 class="version_info">
+           <i class="material-icons">info</i>
+            Versions: <span>10</span>
+           </h4>
+         </div>
+       </a>
+       
+       <a class="bdevice__item" href="devices/lavender">
+        <img src="src/img/devices/lavender.png" class="device__preview" alt="">
+         <div class="device__data">
+          <h3 class="devicename">Redmi Note 7 (lavender)</h3>
+           <h4 class="lupdated">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8">
+             <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+            </svg>
+             Latest build: <span>2020/04/25</span>
+           </h4>
+           <h4 class="version_info">
+           <i class="material-icons">info</i>
+            Versions: <span>10</span>
+           </h4>
+         </div>
+       </a>
 
-                        <div class="col">
-                          <a href="devices/vince">
-                          <div class="portfolio-code">
-                         <img width="350px" height="334px" src="src/img/devices/vince.png" class="code-work-img">
-                         <div class="project_heading-code">Redmi 5 Plus</div>
-                        <p class="code-stuff">vince</p>
-                      </div>
-                        </div>
+       <a class="bdevice__item" href="devices/vince">
+        <img src="src/img/devices/vince.png" class="device__preview" alt="">
+         <div class="device__data">
+          <h3 class="devicename">Redmi Note 5/Plus (vince)</h3>
+           <h4 class="lupdated">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8">
+             <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+            </svg>
+             Latest build: <span>2020/04/25</span>
+           </h4>
+           <h4 class="version_info">
+           <i class="material-icons">info</i>
+            Versions: <span>10</span>
+           </h4>
+         </div>
+       </a>
 
-                      </div>
-                    </div>
+       </div>
+      </div>
 
-</div>
+     </div>
+    </div>
+   </div>
   <div class="copyright">
-      By&nbsp;<a href="about">Kotya Agapkin, 2020</a>
+      By&nbsp;<a href="about">Kotya Agapkin</a>
   </div>
   <script src="src/js/jquery.min.js"></script>
   <script src="src/js/script.js"></script>
