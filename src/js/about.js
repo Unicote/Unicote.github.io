@@ -2,8 +2,8 @@ const data = [
   {
     name: "BuildBot",
     shortDesc: "Android Build Scripts",
-    githubLink: "https://github.com/KotyaTheCat/BuildBot",
-    liveDemo: "https://github.com/KotyaTheCat/BuildBot#installation",
+    githubLink: "https://github.com/Unicote/BuildBot",
+    liveDemo: "https://github.com/Unicote/BuildBot#installation",
     moreInfo:
       "Android Build Scripts for building custom ROMs",
     moreInfoPhoto: "src/img/projects/BuildBot.jpg",
@@ -12,8 +12,8 @@ const data = [
   {
     name: "Rom_Extractor-Linux",
     shortDesc: "Extractor for linux",
-    githubLink: "https://github.com/KotyaTheCat/Rom_Extractor-Linux",
-    liveDemo: "https://github.com/KotyaTheCat/Rom_Extractor-Linux#released-scripts",
+    githubLink: "https://github.com/Unicote/Rom_Extractor-Linux",
+    liveDemo: "https://github.com/Unicote/Rom_Extractor-Linux#released-scripts",
     moreInfo:
       "Rom extractor for linux",
     moreInfoPhoto: "src/img/projects/extrator.png",
@@ -22,8 +22,8 @@ const data = [
   {
     name: "Rock Paper and Scissors",
     shortDesc: "Simple game in JS",
-    githubLink: "https://github.com/KotyaTheCat/rps/",
-    liveDemo: "https://kotyathecat.github.io/rps/",
+    githubLink: "https://github.com/Unicote/rps/",
+    liveDemo: "https://Unicote.github.io/rps/",
     moreInfo:
       "Simple Rock Paper and Scissors. Based on http://rock-paper-sizor.surge.sh/",
     moreInfoPhoto: "src/img/projects/rps.png",
