@@ -69,13 +69,13 @@
         <div class="row align-items-centre">
         <div class="posts-12 posts-md-6">
             <div class="title-post-para">Сборка Android из исходников [Инструкция]</div>
-            <div class="posts-para">Долго собирался написать эту инструкцию, в первую очередь для себя, так как часто переустанавливаю операционку на компьютере. Делаю всё на примере Ubuntu 19.10, которая находится у меня на Google Cloud. Итак, перейдём сразу к делу. 
+            <div class="posts-para">Долго собирался написать эту инструкцию, в первую очередь для себя, так как часто переустанавливаю операционку на компьютере. Делаю всё на примере Ubuntu 20.04, которая находится у меня на Google Cloud. Итак, перейдём сразу к делу. 
 <ul>1. Мы установили Ubuntu, теперь обновим уже имеющиеся пакеты в системе:</ul>
 <ul><div class="line" readonly="">sudo apt-get update && sudo apt-get dist-upgrade</div></ul>
 
 2. Теперь поставим нужные нам пакеты, которых нет по умолчанию в системе:
-<ul><div class="line" readonly="">sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip bc ccache git imagemagick lib32readline-dev lib32z1-dev liblz4-tool pngquant libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 lzop pngcrush rsync schedtool squashfs-tools openjdk-8-jdk p7zip-full meld brotli qt5-qmake android-tools-adb android-tools-fastboot texinfo maven swapspace</div></ul>
- 
+<ul><div class="line" readonly="">sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip bc ccache git imagemagick lib32readline-dev lib32z1-dev liblz4-tool pngquant libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 lzop pngcrush rsync schedtool squashfs-tools openjdk-8-jdk p7zip-full meld brotli qt5-qmake android-tools-adb android-tools-fastboot python3-networkx python3-pip texinfo maven swapspace m4</div></ul>
+
 3. Прописываем кэш:
 <ul><div class="line" readonly="">ccache -M 50G</div></ul>
 
@@ -91,10 +91,13 @@ export PATH=~/bin:$PATH</ul></div>
 
 <div class="line" readonly=""><ul>source ~/.bashrc</ul></div>
 
+4.1 Делаем python 3 по умолчанию (опционально)
+<div class="line" readonly=""><ul>sudo ln -sf python3 /usr/bin/python</ul></div>
+
 5. Ставим repo:
 <div class="line" readonly=""><ul>mkdir ~/bin && PATH=~/bin:$PATH && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo</ul></div>
 
-6. Зарегистрируемся в git:
+6. Регистрируемся в git:
 <div class="line" readonly=""><ul>git config --global user.name "name" && git config --global user.email "email@mail.com"</ul></div>
 <ul>name - Логин, ник на гите</ul>
 <ul>email@mail.com - тут всё понятно, почта аккаунта на гите</ul>
@@ -135,7 +138,7 @@ export PATH=~/bin:$PATH</ul></div>
   </div>
   <div class="container-op"></div>
   <div class="copyright">
-      By&nbsp;<a href="../../about">Kotya Agapkin, 2020</a>
+      By&nbsp;<a href="../../about">Kotya Agapkin</a>
   </div>
   <script src="../../src/js/script.js"></script>
   <script type="text/javascript" src="../../src/js/theme.js" ></script>
