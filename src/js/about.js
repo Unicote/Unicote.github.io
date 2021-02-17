@@ -7,7 +7,6 @@ const data = [
     moreInfo:
       "Android Build Scripts for building custom ROMs",
     moreInfoPhoto: "src/img/projects/BuildBot.jpg",
-    skills: ['all', 'shell']
   },
   {
     name: "Rom_Extractor-Linux",
@@ -17,7 +16,6 @@ const data = [
     moreInfo:
       "Rom extractor for linux",
     moreInfoPhoto: "src/img/projects/extrator.png",
-    skills: ['all', 'shell', 'python']
   },
   {
     name: "Rock Paper and Scissors",
@@ -27,7 +25,6 @@ const data = [
     moreInfo:
       "Simple Rock Paper and Scissors. Based on http://rock-paper-sizor.surge.sh/",
     moreInfoPhoto: "src/img/projects/rps.png",
-    skills: ['all', 'javascript', 'html', 'css']
   }
 ];
 
@@ -104,33 +101,6 @@ function portfolioItem() {
 }
 
 portfolioItem()
-
-// finding skills from data
-
-function findSkills(list) {
-  return list.reduce((result, element) => {
-    result.push(...element.skills)
-    return result.filter((a, b) => result.indexOf(a) === b)
-  }, [])
-}
-
-// finding data item using skill
-
-function findDataWithSkill(data, skill) {
-  return data
-    .filter(item => item.skills.includes(skill))
-}
-
-// render skillsButtons
-
-const skillsContainer = document.getElementById('skills')
-const skills = findSkills(data)
-
-skills.forEach(skill => {
-  skillsContainer.innerHTML += `
-    <button data-skill=${skill} class='skill__button' >${skill.toUpperCase()}</button>
-  `
-})
 
 const skillButtons = document.querySelectorAll('.skill__button')
 
