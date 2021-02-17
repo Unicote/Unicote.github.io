@@ -504,14 +504,6 @@ body.dark-theme {
   font-size: 2rem;
   letter-spacing: normal;
 }
-
-.socialmedia {
-  display: inline-block;
-  max-width: 10%;
-  margin-top:1rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-}
  
 .profile-pic{
   max-width: 80%;
