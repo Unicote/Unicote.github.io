@@ -129,6 +129,15 @@ a:hover {
   font-weight: bold;
   line-height: 3;
   cursor: pointer;
+  text-align: left;
+}
+
+.tab label1 {
+  position: relative;
+  padding: .375rem .75rem;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
 }
 
 .tab-in-tab {
@@ -261,4 +270,131 @@ a:hover {
 .copyright-devices a {
   color: var(--main-color);
   text-decoration: none;
+}
+
+.inforec {
+  left: 30%;
+  border-radius: 10px;
+  background: orange;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+inforec:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 1110px){
+  .inforec {
+    left: 25%;
+    border-radius: 10px;
+    background: orange;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1028px){
+  .inforec {
+    left: 20%;
+    border-radius: 10px;
+    background: orange;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 991px){
+  .inforec {
+    left: 10%;
+    border-radius: 10px;
+    background: orange;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 940px){
+  .inforec {
+    left: 5%;
+    border-radius: 10px;
+    background: orange;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 910px){
+  .device {
+    font-size:15px;
+  }
+  .inforec {
+    border-radius: 10px;
+    background: orange;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 850px){
+  .device {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 825px){
+  .device {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 800px){
+  .device {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 740px){
+  .device {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 641px){
+  .device {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px){
+  .inforec {
+    display: none;
+  }
+  .inforom {
+    display: none;
+  }
+}
+
+@media (width: 540px){
+  .inforec {
+    display: none;
+  }
+  .inforom {
+    display: none;
+  }
+}
+
+.clearfix {
+  display: table;
+  clear: both;
+  visibility: hidden;
+}
+  
+.inforom {
+  border-radius: 10px;
+  background: green;
+  margin-left: auto;
+  margin-right: auto;
 }
