@@ -348,6 +348,9 @@
   cursor: pointer;
 }
 
+.button-about {
+  margin:1rem;
+  }
 .btn-prm {
   color: var(--main-color);
   background-color: var(--main-bg-color);
