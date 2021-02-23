@@ -66,6 +66,7 @@ a:hover {
   font-size: 1.2rem;
   margin: 1.3rem;
   text-align-last: end;
+  color:var(--main-color);
 }
 
 .site {
@@ -74,5 +75,10 @@ a:hover {
 }
 
 .indentation { 
-   margin-top:70px;
+  margin-top:70px;
+}
+
+.about-news-text {
+  color: gray;
+  font-size: 17px;
 }
