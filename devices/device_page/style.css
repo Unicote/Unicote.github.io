@@ -286,6 +286,20 @@ inforec:after {
   clear: both;
 }
 
+.infokernel {
+  left: 47%;
+  border-radius: 10px;
+  background: red;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+infokernel:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
 @media (max-width: 1110px){
   .inforec {
     left: 25%;
@@ -338,6 +352,59 @@ inforec:after {
   }
 }
 
+@media (max-width: 1110px){
+  .infokernel {
+    left: 44%;
+    border-radius: 10px;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1028px){
+  .infokernel {
+    left: 35%;
+    border-radius: 10px;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 991px){
+  .infokernel {
+    left: 25%;
+    border-radius: 10px;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 940px){
+  .infokernel {
+    left: 25%;
+    border-radius: 10px;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 910px){
+  .device {
+    font-size:15px;
+  }
+  .infokernel {
+    left: 20%;
+    border-radius: 10px;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 850px){
   .device {
     font-size: 14px;
@@ -375,13 +442,19 @@ inforec:after {
   .inforom {
     display: none;
   }
+  .infokernel {
+    display: none;
+  }
 }
 
-@media (width: 540px){
+@media (max-width: 610px){
   .inforec {
     display: none;
   }
   .inforom {
+    display: none;
+  }
+  .infokernel {
     display: none;
   }
 }
