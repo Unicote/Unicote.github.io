@@ -1,94 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>baalajimaestro</title>
-    <link>https://baalajimaestro.me/</link>
-    <description>Recent content on baalajimaestro</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>unicote</title>
+    <link>https://unicote.github.io/</link>
+    <description>Recent content on unicote</description>
     <language>en-us</language>
-    <copyright>Maestro Creativescape</copyright>
+    <copyright>Unicote</copyright>
     <lastBuildDate>Tue, 07 Jul 2020 12:29:41 +0800</lastBuildDate>
     
-	<atom:link href="https://baalajimaestro.me/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Kernel For Newbies</title>
-      <link>https://baalajimaestro.me/posts/kernel-for-newbies/</link>
-      <pubDate>Tue, 07 Jul 2020 12:29:41 +0800</pubDate>
-      
-      <guid>https://baalajimaestro.me/posts/kernel-for-newbies/</guid>
-      <description>Lets gear up with the necessary things. You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space. If you don’t match the specs, don’t worry, we can workaround it. And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies.</description>
-    </item>
+	<atom:link href="https://unicote.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>New Bug Tracker</title>
-      <link>https://baalajimaestro.me/posts/bugtracker/</link>
-      <pubDate>Mon, 21 Oct 2019 19:33:00 +0530</pubDate>
-      
-      <guid>https://baalajimaestro.me/posts/bugtracker/</guid>
-      <description>This post serves as an announcement to the new bugtracker service I have started to use.
-This is an unified bugtracker for all projects I work on. People need to report bugs here so that it can be looked after by any of the devs.
-Well, the login creds for the issue tracker are as follows.
-Username: issue@issue.com
-Password: issue
-Report the bug at the right project. It will assigned and looked after as soon as possible.</description>
-    </item>
-    
-    <item>
-      <title>Vendor Blob Extraction</title>
-      <link>https://baalajimaestro.me/posts/extract-vendor/</link>
-      <pubDate>Thu, 10 Oct 2019 21:24:00 +0530</pubDate>
-      
-      <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
-      <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
-⚠️ Note that you need a fully synced rom source for this.
-  Place the Device Tree with the extract-files.sh inside.
-  If your device tree doesn&amp;rsquo;t have an extract-files script, get it from github, its almost on every tree.</description>
-    </item>
-    
-    <item>
-      <title>Opensource and Monetization</title>
-      <link>https://baalajimaestro.me/posts/opensource-and-monetisation/</link>
-      <pubDate>Mon, 24 Jun 2019 03:30:00 +0530</pubDate>
-      
-      <guid>https://baalajimaestro.me/posts/opensource-and-monetisation/</guid>
-      <description>Seems like these don’t go hand in hand, does it?
-Lemme view it from my perspective.
-Recently there was an android kernel developer who tried to monetize his kernel in the most inappropriate way possible. It became disastrous and he became a meme in that process. He was forced to leave development, forever.
-So, is monetizing opensource software cancerous?
-Red Hat is the global leader in open source software solutions — and has a clear strategy in how to generate revenue.</description>
-    </item>
-    
-    <item>
-      <title>Git For Newbies</title>
-      <link>https://baalajimaestro.me/posts/git-for-newbies/</link>
-      <pubDate>Tue, 18 Jun 2019 12:29:41 +0800</pubDate>
-      
-      <guid>https://baalajimaestro.me/posts/git-for-newbies/</guid>
-      <description>Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
- Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&amp;rsquo;t have to type $ on your terminal.</description>
-    </item>
-    
-    <item>
-      <title>$whoami</title>
-      <link>https://baalajimaestro.me/about/</link>
+      <title>Update</title>
+      <link>https://unicote.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://baalajimaestro.me/about/</guid>
-      <description>I am Baalaji Balasubramani, a 21 year old, popularly known around the internet world as baalajimaestro.
-I work on a lot of opensource projects, you can find them all on my GitHub!
-I was using Linux as a primary OS for 4 years, and now I switched to WSL2, and nuked the dual boot, seems a lot better. I will not be writing a review about WSL2, rather I could say it does suit my needs!</description>
-    </item>
-    
-    <item>
-      <title>Contact Me</title>
-      <link>https://baalajimaestro.me/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://baalajimaestro.me/contact/</guid>
-      <description>I would be available on Telegram almost all time except my sleep. You can DM me on telegram, provided you convey your information concisely and readably, rather than sending a dumb hi and expecting me to respond on it. If you don&amp;rsquo;t have Telegram, no problems, you can tweet to me, @baalajimaestro. You can ping me on discord(baalajimaestro#8313), or email me me@baalajimaestro.me.
-I respond to any message within the same day.</description>
+      <guid>https://unicote.github.io/contact/</guid>
+      <description>Update</description>
     </item>
     
   </channel>

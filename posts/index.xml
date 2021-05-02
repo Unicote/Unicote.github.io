@@ -1,324 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on baalajimaestro</title>
-        <link>https://baalajimaestro.me/posts/</link>
-        <description>Recent content in Posts on baalajimaestro</description>
-        <generator>Hugo -- gohugo.io</generator>
+        <title>Posts on unicote</title>
+        <link>https://unicote.github.io/posts/</link>
+        <description>Recent content in Posts on unicote</description>
         <language>en-us</language>
-        <copyright>Maestro Creativescape</copyright>
+        <copyright>Unicote</copyright>
         <lastBuildDate>Tue, 07 Jul 2020 12:29:41 +0800</lastBuildDate>
-        <atom:link href="https://baalajimaestro.me/posts/index.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>Kernel For Newbies</title>
-            <link>https://baalajimaestro.me/posts/kernel-for-newbies/</link>
-            <pubDate>Tue, 07 Jul 2020 12:29:41 +0800</pubDate>
-            
-            <guid>https://baalajimaestro.me/posts/kernel-for-newbies/</guid>
-            <description>Lets gear up with the necessary things. You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space. If you don’t match the specs, don’t worry, we can workaround it. And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies.</description>
-            <content type="html"><![CDATA[<p>Lets gear up with the necessary things.
-You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space.
-If you don’t match the specs, don’t worry, we can workaround it.
-And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies. For deps, just check out akhilnarang/scripts</p>
-<p>Lets jump into the what it is to compile a kernel. So, you have seen a developer sending fancy kernel zips for you, you wanna make your own kernel, with your name stamped on it? Well, that’s too easy than you think.</p>
-<p>A bit of terminologies………</p>
-<p>Since we aren’t compiling a phone kernel inside a phone, you need a cross-compiler.</p>
-<p><strong>What is cross compiler now?</strong>
-A cross compiler is a compiler capable of creating executable code for a platform other than the one on which the compiler is running. For example, a compiler that runs on a Linux amd64 but generates code that runs on Android smartphone (aarch64) is a cross compiler.</p>
-<p><strong>What is aarch64?</strong></p>
-<p>That’s the common architecture for all android smartphones today. Well, there is an aarch32 but, that’s too old to be considered in current age.</p>
-<p><strong>So, where do I get a damn cross-compiler, I googled, I cant find it.</strong></p>
-<p><a href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads">https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads</a></p>
-<p>Go to this link, and grab the toolchain AArch64 GNU/Linux target and is x86_64 host.
-Just use some common sense, they are right there visible on that site. They are updated regularly, so be sure to check them out once in a while.</p>
-<p>Ok, I have the toolchains, what more?
-Can I compile?</p>
-<p>Oh yes, you can almost compile now, did you clone the sources?
-Probably look at your OEM code or someone’s code you wanna compile. Clone the sources fully with git.</p>
-<p>Next steps, just few path changes, and finally we can hit the compile</p>
-<blockquote>
-<p><strong>A toolchain prefix is what all files on that dir start with. Like <code>aarch64-linux-gnu-***</code> The first part will remain almost constant. Remember the hyphen. You need to add it.</strong></p>
-</blockquote>
-<p>Cd to the directory where you have the cross-compiler, and then run this.</p>
-<p><code>export CROSS_COMPILE=$(pwd)/bin/&lt;toolchain_prefix&gt;-</code></p>
-<p>Since you aren’t building a kernel for your PC, tell that to the kernel buildsystem
-export ARCH=arm64 &amp;&amp; export SUBARCH=arm64
-This tells that you are building for arm64 architecture.</p>
-<p>Find the defconfig to build.</p>
-<blockquote>
-<p><strong>The defconfig is, in simple terms, a file containing a lot of switches and configurations that your kernel build will read and work out the binary. If you donno anything, better don’t mess with it.</strong></p>
-</blockquote>
-<p>All the defconfigs are located at arch/arm64/configs/xxxxx_defconfig
-You need to find which defconfig your OEM/the other person used. Use your common sense again.</p>
-<p>Next:
-The glorious make.</p>
-<p><code>make O=out &lt;defconfig_name&gt;</code></p>
-<p>and then
-<code>make O=out -j$(nproc)</code></p>
-<p>Wait for a while, it takes around 1min-1hr depending on your system specs.
-If those commands succeed, you will have an Image, Image-dtb, Image.gz, or Image.gz-dtb file at the end. They will be usually at <code>out/arch/arm64/boot/Image.gz-dtb</code> or accordingly.</p>
-<p>Assuming you were able to compile the kernel successfully, you now need to flash it!</p>
-<p>How do I make a dtb into zip? Rename?
-No! That’s not how you do it.
-Add this dtb file to the root dir of the cloned anykernel3
-<a href="https://github.com/osm0sis/anykernel3">https://github.com/osm0sis/anykernel3</a>
-Get to the anykernel.sh and use a bit of common sense. That’s all. Your flashable zip must be ready.</p>
-<p>What’s next:</p>
-<p><strong>Upstreaming CAF:</strong></p>
-<p>If your device has a qualcomm snapdragon processor, then sure it has CAF support. CAF is known for improving performance and other stuff with their patches.</p>
-<p><strong>What all can you grab?</strong></p>
-<p>Generally people grab QCACLD-3.0 and Techpack. You may also merge their own kernel repos. It contains a bit more latest patches than what your OEM would have shipped.</p>
-<p><strong>How should I merge?</strong>
-Merging CAF requires tags. They aren’t normal repos with branches. They are tagged so that you can fetch a specific tag at any point.
-Lets say your processor is Snapdragon 660. Look up for its codename(google), its sdm660.
-If you wanna know the latest tag for your processor checkout this link: https://t.me/CAFReleases
-Just use telegram’s search button and search for your processor.</p>
-<p>Mind it these are all tagged with android versions. If you use a kernel that’s Pie and merge a CAF tag of android 10, you might be ending with 420 conflicts, not kidding.</p>
-<ul>
-<li>You need to get some patience looking for your tag, as usual</li>
-<li>Get here, <a href="https://source.codeaurora.org/quic/la/">https://source.codeaurora.org/quic/la/</a></li>
-<li>You will find kernel/msm-4.4, 4.9, 4.14 and a bunch others</li>
-<li>According to whats yours, copy that link</li>
-<li>Then its a usual git merge!</li>
-<li>git pull <a href="https://source.codeaurora.org/quic/la/kernel/msm-4.4/">https://source.codeaurora.org/quic/la/kernel/msm-4.4/</a> {YOUR TAG}</li>
-<li>And boom! Again conflicts! Again resolution!</li>
-</ul>
-<p><strong>QCACLD Upstreaming</strong></p>
-<p>Just look out which android is your OEM/other developer using it on. Because Pie tags can work on 10 while the other way round wont.
-You found the tag name, so get to your terminal and follow a few steps.</p>
-<p>From LKN chat in telegram,
-Initial merge:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add qcacld-3.0 https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0
-git fetch qcacld-3.0 &lt;TAG&gt;
-git merge -s ours --no-commit --allow-unrelated-histories FETCH_HEAD
-git read-tree --prefix<span style="color:#f92672">=</span>drivers/staging/qcacld-3.0 -u FETCH_HEAD
-git commit
-</code></pre></div><p><strong>Updating to a newer tag</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch qcacld-3.0 &lt;TAG&gt;
-git merge -X subtree<span style="color:#f92672">=</span>drivers/staging/qcacld-3.0 FETCH_HEAD
-Repeat the above <span style="color:#66d9ef">for</span> 
-qca-wifi-host-cmn  and fw-api as well.
-qcacld-3.0 source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0
-fw-api source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api
-qca-wifi-host-cmn source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn
-</code></pre></div><p>If you happen to have some merge conflicts, just understand its some bunch of C code, you can understand the logic and figure it out.</p>
-<p>Well, techpack of 4.14 too follows similar scheme as you did for the qcacld.
-The repos you need to lookout for are audio-kernel and data-kernel</p>
-<p><strong>Linux Upstream</strong></p>
-<p><strong>Why upstream?</strong>:</p>
-<p>Upstreaming Linux helps you patch some critical vulnerabilities that might have been spotted after the kernel was released.
-The point releases like 4.14.170, 171, indicate some vulnerability or performance or maybe even some driver fixes.
-They dont usually add major changes.</p>
-<p><strong>How to upstream?</strong>:
-Linux upstream can be done from three different places as of now.
-<a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git">https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git</a>
-<a href="https://android.googlesource.com/kernel/common/+refs">https://android.googlesource.com/kernel/common/+refs</a>
-<a href="https://github.com/android-linux-stable/">https://github.com/android-linux-stable/</a></p>
-<p><strong>What is the diff?</strong>
-Kernel/common is done by the same person who deals with merges on kernel.org git.
-Its adapted for android, if you want the bleeding edge patches working perfectly on android you need to head right here.</p>
-<p><strong>Android-Linux-Stable:</strong></p>
-<p>This has both CAF patches and Linux stable merged. It’s a sweet spot for laziness. Go checkout their readme for more: <a href="https://github.com/android-linux-stable/notes/tree/master/trees">https://github.com/android-linux-stable/notes/tree/master/trees</a></p>
-<p>Merging any of these is bound to introduce a git conflict. Have fun resolving them.</p>
-<p><strong>Upstreaming your kernel with ASB:</strong></p>
-<p>What&rsquo;s android security patch doing in kernels?</p>
-<ul>
-<li>
-<p>Well, Google releases security patches every month, and we know that, there&rsquo;s nothing new about it.
-But they also fix some vulnerabilities they found on their Pixel Kernel. You can merge them up, showing off to your users that
-security is maxxed (Bootloader unlocked, so nothing is safe)</p>
-</li>
-<li>
-<p>So lets get started.</p>
-</li>
-<li>
-<p>Go to Google kernel/common, if you forgot/donno what it is. Its here <a href="https://android.googlesource.com/kernel/common/">https://android.googlesource.com/kernel/common/</a></p>
-</li>
-<li>
-<p>Browse its tags, not branches!</p>
-</li>
-<li>
-<p>Look for the ASB-2020-01-05-{kernel-version}-{android-version}</p>
-</li>
-<li>
-<p>By android version, it means your kernel&rsquo;s base android version.</p>
-</li>
-<li>
-<p>Dont randomly pick an android q patch over android p kernel base. Thats not gonna work!</p>
-</li>
-<li>
-<p>Now for merging the tag!</p>
-</li>
-<li>
-<p>git pull <a href="https://android.googlesource.com/kernel/common/">https://android.googlesource.com/kernel/common/</a> {your tag you discovered}</p>
-</li>
-<li>
-<p>Its gonna throw a real bunch of conflicts, use some C knowledge and common sense to resolve them.</p>
-</li>
-</ul>
-<p><strong>Building with Clang:</strong></p>
-<p>Clang is an LLVM C/C++/Objective-C compiler, which means, its basically just another C compiler. But whats so special about clang? Its faster!
-When you compile 1million files, a bump of few ms on each file, bumps the whole process by minutes.</p>
-<p><strong>Can every kernel build on clang?</strong>
-Yes, as long as your kernel is above 3.18
-Do I need to do something to make it support?
-Grab a clang-patchset from <a href="https://github.com/nathanchance/android-kernel-clang">https://github.com/nathanchance/android-kernel-clang</a>
-Checkout the branches and decide which one you need.</p>
-<p>4.14 and above natively support clang. You don’t need to mess with your source.</p>
-<p>Have fun hacking!</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>New Bug Tracker</title>
-            <link>https://baalajimaestro.me/posts/bugtracker/</link>
-            <pubDate>Mon, 21 Oct 2019 19:33:00 +0530</pubDate>
-            
-            <guid>https://baalajimaestro.me/posts/bugtracker/</guid>
-            <description>This post serves as an announcement to the new bugtracker service I have started to use.
-This is an unified bugtracker for all projects I work on. People need to report bugs here so that it can be looked after by any of the devs.
-Well, the login creds for the issue tracker are as follows.
-Username: issue@issue.com
-Password: issue
-Report the bug at the right project. It will assigned and looked after as soon as possible.</description>
-            <content type="html"><![CDATA[<p>This post serves as an announcement to the new bugtracker service I have started to use.</p>
-<p>This is an unified bugtracker for all projects I work on. People need to report bugs here so that it can be looked after by any of the devs.</p>
-<p>Well, the login creds for the issue tracker are as follows.</p>
-<p><code>Username: issue@issue.com</code></p>
-<p><code>Password: issue</code></p>
-<p>Report the bug at the right project. It will assigned and looked after as soon as possible.</p>
-<p>Have a nice day!</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Vendor Blob Extraction</title>
-            <link>https://baalajimaestro.me/posts/extract-vendor/</link>
-            <pubDate>Thu, 10 Oct 2019 21:24:00 +0530</pubDate>
-            
-            <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
-            <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
-⚠️ Note that you need a fully synced rom source for this.
-  Place the Device Tree with the extract-files.sh inside.
-  If your device tree doesn&amp;rsquo;t have an extract-files script, get it from github, its almost on every tree.</description>
-            <content type="html"><![CDATA[<h2 id="how-to-extract-vendor-blobs-from-stock-rom">How to extract vendor blobs from stock rom?</h2>
-<p>I got asked this question a lot, so I&rsquo;ll post it here. Its gonna just be steps on how to do it.</p>
-<p>⚠️ Note that you need a fully synced rom source for this.</p>
-<ul>
-<li>
-<p>Place the Device Tree with the extract-files.sh inside.</p>
-</li>
-<li>
-<p>If your device tree doesn&rsquo;t have an extract-files script, get it from github, its almost on every tree.</p>
-</li>
-<li>
-<p>Grab the stock rom for your device, MIUI/OOS or OneUI whatever.</p>
-</li>
-<li>
-<p>Create a new folder named dump and extract it there.</p>
-</li>
-<li>
-<p>Now see if it has a payload.bin or system.dat.br and vendor.dat.br</p>
-</li>
-</ul>
-<h3 id="if-it-has-a-payloadbin-then-your-device-is-ab-and-the-job-is-actually-very-easy">If it has a payload.bin, then, your device is A/B, and the job is actually very easy,</h3>
-<ul>
-<li>Use <a href="https://forum.xda-developers.com/attachment.php?attachmentid=4760222">this tool</a> and run the python file in it.</li>
-<li>You will now have img files ready.</li>
-</ul>
-<h3 id="you-are-unlucky-and-have-br-files-inside">You are unlucky and have br files inside.</h3>
-<p>So what? We can still extract them, a bit of more work, but yes we can.</p>
-<ul>
-<li>Install brotli from your package manager</li>
-<li>Run the following commands, it will decompress the brotli compression of your images</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brotli --decompress system.new.dat.br
-brotli --decompress vendor.new.dat.br
-</code></pre></div><ul>
-<li>Now we to convert the dat files to img, run these commands on terminal, to convert it</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sLo sdat2img.py https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
-python3 sdat2img.py system.transfer.list system.new.dat
-python3 sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
-</code></pre></div><ul>
-<li>Now you would have both the images ready for extracting.</li>
-</ul>
-<h3 id="final-step">Final Step</h3>
-<p>Lets Extract the img files we have!</p>
-<ul>
-<li>Create folders for extracting.</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p system
-mkdir -p vendor
-</code></pre></div><ul>
-<li>
-<p>Install P7-Zip from your package manager</p>
-</li>
-<li>
-<p>Now the extraction.</p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z x system.img -y -osystem
-7z x vendor.img -y -ovendor
-</code></pre></div><p>In your folder, there would be two folders system and vendor, with many files now.</p>
-<h3 id="pulling--blobs">Pulling  blobs</h3>
-<ul>
-<li>
-<p>The work directory which had the system and vendor folders is assumed to be at ~/dump for now.</p>
-</li>
-<li>
-<p>cd to the device tree, and run the command</p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash extract-files.sh ~/dump
-</code></pre></div><ul>
-<li>Your vendor blobs would be at <code>vendor/brand/device</code></li>
-</ul>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Opensource and Monetization</title>
-            <link>https://baalajimaestro.me/posts/opensource-and-monetisation/</link>
-            <pubDate>Mon, 24 Jun 2019 03:30:00 +0530</pubDate>
-            
-            <guid>https://baalajimaestro.me/posts/opensource-and-monetisation/</guid>
-            <description>Seems like these don’t go hand in hand, does it?
-Lemme view it from my perspective.
-Recently there was an android kernel developer who tried to monetize his kernel in the most inappropriate way possible. It became disastrous and he became a meme in that process. He was forced to leave development, forever.
-So, is monetizing opensource software cancerous?
-Red Hat is the global leader in open source software solutions — and has a clear strategy in how to generate revenue.</description>
-            <content type="html"><![CDATA[<p>Seems like these don’t go hand in hand, does it?</p>
-<p>Lemme view it from my perspective.</p>
-<p>Recently there was an android kernel developer who tried to monetize his kernel in the most inappropriate way possible. It became disastrous and he became a meme in that process. He was forced to leave development, forever.</p>
-<p>So, is monetizing opensource software cancerous?</p>
-<p>Red Hat is the global leader in open source software solutions — and has a clear strategy in how to generate revenue. They package the popular open source operating system Linux as Red Hat Enterprise Linux and deliver it to enterprises with a promise of 10 years of support. Open source projects like Linux can literally change every day, so that’s a tall order.</p>
-<p>So how do they live in the opensource market?
-Is monetizing opensource stuff good?</p>
-<p>GPL, the most renowned license in the opensource world, permits monetising the code.
-So where are people going wrong in their attempts to monetise their works?</p>
-<p>Greed is good, yes read it again, greed is good. Money rules life.</p>
-<p>Lets see possible ways to monetize an opensource project.</p>
-<h4 id="advertising">Advertising</h4>
-<p>Monetize download links with ads, you must have seen a few people doing this. The download link is url shortened and is sent to the public.</p>
-<p>Ads on the project website can also be a possible way to monetise your project.</p>
-<h4 id="paid-features">Paid Features</h4>
-<p>Lemme cite an example of this case. The pretty famous Hyperion Launcher for android is opensource. But it does have features like gestures and widgets which needs the hyperion supreme package, the paid version. The developer earns in the case where people pay for using all the cool features which are locked.</p>
-<p>(( Lawnchair laughs ))</p>
-<h4 id="dual-licensing">Dual Licensing</h4>
-<p>Dual licensing allows companies to release commercial software (with a commercial license) that’s derived from free OSS commonly distributed under the GNU General Public (GPL) license. A company releases identical products under a commercial license and under a free license like GPL. MySQL is a pretty good example of this case, where they produce community edition under GPL and enterprise edition under their own commercial license</p>
-<h4 id="paid-support">Paid Support</h4>
-<p>Red Hat promises really great customer support for their premium enterprise Linux Distribution. People who rely on their servers a lot usually pay for this paid support since this ensures their servers never breaks down. This all happens while their linux source code is fully opensource.</p>
-<p>Open source software is highly regarded thanks to its security, reliability, and vibrant communities that support it. Moreover, OSS helps companies avoid reinventing the wheel, and can even be used within proprietary software. Altogether, these factors have made OSS quite popular. Today, people are willing to pay for open source software to ensure legal protection, technical support, and professional services. With paid open source technologies, companies can offer the best of both worlds: transparent technology with the support and features of commercial software.</p>
-]]></content>
-        </item>
-        
+        <atom:link href="https://unicote.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+
         <item>
             <title>Git For Newbies</title>
-            <link>https://baalajimaestro.me/posts/git-for-newbies/</link>
+            <link>https://unicote.github.io/posts/git-for-newbies/</link>
             <pubDate>Tue, 18 Jun 2019 12:29:41 +0800</pubDate>
             
-            <guid>https://baalajimaestro.me/posts/git-for-newbies/</guid>
+            <guid>https://unicote.github.io/posts/git-for-newbies/</guid>
             <description>Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
  Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&amp;rsquo;t have to type $ on your terminal.</description>
             <content type="html"><![CDATA[<p>Before we start make sure <code>git --version</code> command successfully returns. If the output is something like <strong>command not found</strong> then please make sure Git is properly installed on your machine. My machine output is shown below. <strong>Output on your machine might be different.</strong></p>
@@ -331,8 +26,8 @@ $ git config --global user.email <span style="color:#e6db74">&#34;Your email&#34
 </code></pre></div><p>The command shown above populates a file named <code>.gitconfig</code> in your user home directory with configuration information.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat ~/.gitconfig
 </code></pre></div><pre><code>[user]
-	name = baalajimaestro
-	email = baalajimaestro@computer4u.com
+	name = unicote
+	email = unicote@computer4u.com
 </code></pre><h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li>Why version control system?</li>
@@ -673,7 +368,7 @@ $ git push local master
 <p>Give it name <code>git-bas</code> and choose defaults.</p>
 <h3 id="add-remote">add remote</h3>
 <p>From inside your <code>git-basic</code>, execute the following command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git remote add origin https://github.com/baalajimaestro/git-basic.git
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git remote add origin https://github.com/unicote/git-basic.git
 </code></pre></div><h3 id="git-push">git push</h3>
 <p>Push the changes to Github.</p>
 <h3 id="create-pull-request">Create pull request</h3>
