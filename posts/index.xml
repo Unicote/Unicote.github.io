@@ -1,20 +1,83 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on baalajimaestro</title>
-        <link>https://baalajimaestro.me/posts/</link>
-        <description>Recent content in Posts on baalajimaestro</description>
+        <title>Posts on Unicote</title>
+        <link>https://unicote.github.io/posts/</link>
+        <description>Recent content in Posts on Unicote</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <copyright>Maestro Creativescape</copyright>
-        <lastBuildDate>Tue, 07 Jul 2020 12:29:41 +0800</lastBuildDate>
-        <atom:link href="https://baalajimaestro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Thu, 13 May 2021 15:58:00 +0300</lastBuildDate>
+        <atom:link href="https://unicote.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Setting up a working environment for build</title>
+            <link>https://unicote.github.io/posts/2021/05/setting-up-a-working-environment-for-build/</link>
+            <pubDate>Thu, 13 May 2021 15:58:00 +0300</pubDate>
+            
+            <guid>https://unicote.github.io/posts/2021/05/setting-up-a-working-environment-for-build/</guid>
+            <description>⚠️ Note: I am using ubuntu 20.04. This manual is suitable for ubuntu 20.04, performance on other OC/versions is unknown.  Installing &amp;amp; updating packages  To begin with, we will update the existing packages in the system:  sudo apt-get update &amp;amp;&amp;amp; sudo apt-get dist-upgrade  Now we will install the packages we need, which are not present by default in the system:  sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip bc ccache git imagemagick lib32readline-dev lib32z1-dev liblz4-tool pngquant libncurses5 libncurses5-dev libsdl1.</description>
+            <content type="html"><![CDATA[<ul>
+<li>⚠️ Note: I am using ubuntu 20.04. This manual is suitable for ubuntu 20.04, performance on other OC/versions is unknown.</li>
+</ul>
+<h2 id="installing--updating-packages">Installing &amp; updating packages</h2>
+<ul>
+<li>To begin with, we will update the existing packages in the system:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get dist-upgrade
+</code></pre></div><ul>
+<li>Now we will install the packages we need, which are not present by default in the system:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip bc ccache git imagemagick lib32readline-dev lib32z1-dev liblz4-tool pngquant libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 lzop pngcrush rsync schedtool squashfs-tools openjdk-8-jdk p7zip-full meld brotli qt5-qmake android-tools-adb android-tools-fastboot python3-networkx python3-pip texinfo maven swapspace m4
+</code></pre></div><h3 id="ccache">CCache</h3>
+<ul>
+<li>Let&rsquo;s set the ccache size. In the future, ccache will help you significantly speed up your build time. You can learn more about this technology <a href="https://en.wikipedia.org/wiki/Cache_(computing)">here</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ccache -M 50G
+</code></pre></div><ul>
+<li>Open bashrc to execute some commands at startup. They will be executed every time the terminal is opened.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano ~/.bashrc
+</code></pre></div><ul>
+<li>Add these lines to the end:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export USE_CCACHE<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+export PATH<span style="color:#f92672">=</span>~/bin:$PATH
+</code></pre></div><ul>
+<li>Close bashrc with ctrl+x and then ctrl+y</li>
+<li>Next, write in the terminal:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source ~/.bashrc
+</code></pre></div><h2 id="use-python3">Use python3</h2>
+<ul>
+<li>Making python 3 by default (optional)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ln -sf python3 /usr/bin/python
+</code></pre></div><h2 id="git">Git</h2>
+<ul>
+<li>Our computer doesn&rsquo;t know who I am in git. Let&rsquo;s help him solve this riddle by using this command</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#f92672">&amp;&amp;</span> git config --global user.email email@example.com
+</code></pre></div><ul>
+<li>Don&rsquo;t forget to change these parameters to your own:</li>
+<li>your_name-Username, nickname in git</li>
+<li><a href="mailto:email@example.com">email@example.com</a> -account email on git</li>
+</ul>
+<h2 id="repo">repo</h2>
+<ul>
+<li>To sync the sources, we need a repo. Let&rsquo;s install it right from <a href="https://storage.googleapis.com/git-repo-downloads/repo">https://storage.googleapis.com/git-repo-downloads/repo</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/bin <span style="color:#f92672">&amp;&amp;</span> PATH<span style="color:#f92672">=</span>~/bin:$PATH <span style="color:#f92672">&amp;&amp;</span> curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo <span style="color:#f92672">&amp;&amp;</span> chmod a+x ~/bin/repo
+</code></pre></div><ul>
+<li>Well, now you can sync the repo</li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Kernel For Newbies</title>
-            <link>https://baalajimaestro.me/posts/kernel-for-newbies/</link>
+            <link>https://unicote.github.io/posts/2020/07/kernel-for-newbies/</link>
             <pubDate>Tue, 07 Jul 2020 12:29:41 +0800</pubDate>
             
-            <guid>https://baalajimaestro.me/posts/kernel-for-newbies/</guid>
+            <guid>https://unicote.github.io/posts/2020/07/kernel-for-newbies/</guid>
             <description>Lets gear up with the necessary things. You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space. If you don’t match the specs, don’t worry, we can workaround it. And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies.</description>
             <content type="html"><![CDATA[<p>Lets gear up with the necessary things.
 You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space.
@@ -71,7 +134,7 @@ Get to the anykernel.sh and use a bit of common sense. That’s all. Your flasha
 <p><strong>How should I merge?</strong>
 Merging CAF requires tags. They aren’t normal repos with branches. They are tagged so that you can fetch a specific tag at any point.
 Lets say your processor is Snapdragon 660. Look up for its codename(google), its sdm660.
-If you wanna know the latest tag for your processor checkout this link: https://t.me/CAFReleases
+If you wanna know the latest tag for your processor checkout this link: <a href="https://t.me/CAFReleases">https://t.me/CAFReleases</a>
 Just use telegram’s search button and search for your processor.</p>
 <p>Mind it these are all tagged with android versions. If you use a kernel that’s Pie and merge a CAF tag of android 10, you might be ending with 420 conflicts, not kidding.</p>
 <ul>
@@ -80,7 +143,7 @@ Just use telegram’s search button and search for your processor.</p>
 <li>You will find kernel/msm-4.4, 4.9, 4.14 and a bunch others</li>
 <li>According to whats yours, copy that link</li>
 <li>Then its a usual git merge!</li>
-<li>git pull <a href="https://source.codeaurora.org/quic/la/kernel/msm-4.4/">https://source.codeaurora.org/quic/la/kernel/msm-4.4/</a> {YOUR TAG}</li>
+<li>git pull <a href="https://source.codeaurora.org/quic/la/kernel/msm-4.14/">https://source.codeaurora.org/quic/la/kernel/msm-4.14/</a> {YOUR TAG}</li>
 <li>And boom! Again conflicts! Again resolution!</li>
 </ul>
 <p><strong>QCACLD Upstreaming</strong></p>
@@ -95,25 +158,29 @@ git read-tree --prefix<span style="color:#f92672">=</span>drivers/staging/qcacld
 git commit
 </code></pre></div><p><strong>Updating to a newer tag</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch qcacld-3.0 &lt;TAG&gt;
-git merge -X subtree<span style="color:#f92672">=</span>drivers/staging/qcacld-3.0 FETCH_HEAD
-Repeat the above <span style="color:#66d9ef">for</span> 
-qca-wifi-host-cmn  and fw-api as well.
-qcacld-3.0 source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0
-fw-api source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api
-qca-wifi-host-cmn source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn
-</code></pre></div><p>If you happen to have some merge conflicts, just understand its some bunch of C code, you can understand the logic and figure it out.</p>
+git merge -X subtree<span style="color:#f92672">=</span>drivers/staging/qcacld-3.0 FETCH_HEAD --allow-unrelated-histories
+</code></pre></div><p>Repeat the above for
+qca-wifi-host-cmn and fw-api as well.</p>
+<ul>
+<li>qcacld-3.0 source: <a href="https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0">https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0</a></li>
+<li>fw-api source: <a href="https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api">https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api</a></li>
+<li>qca-wifi-host-cmn source: <a href="https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn">https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn</a></li>
+</ul>
+<p>If you happen to have some merge conflicts, just understand its some bunch of C code, you can understand the logic and figure it out.</p>
 <p>Well, techpack of 4.14 too follows similar scheme as you did for the qcacld.
 The repos you need to lookout for are audio-kernel and data-kernel</p>
-<p><strong>Linux Upstream</strong></p>
+<p><strong><strong>Linux Upstream</strong></strong></p>
 <p><strong>Why upstream?</strong>:</p>
 <p>Upstreaming Linux helps you patch some critical vulnerabilities that might have been spotted after the kernel was released.
 The point releases like 4.14.170, 171, indicate some vulnerability or performance or maybe even some driver fixes.
 They dont usually add major changes.</p>
 <p><strong>How to upstream?</strong>:
-Linux upstream can be done from three different places as of now.
-<a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git">https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git</a>
-<a href="https://android.googlesource.com/kernel/common/+refs">https://android.googlesource.com/kernel/common/+refs</a>
-<a href="https://github.com/android-linux-stable/">https://github.com/android-linux-stable/</a></p>
+Linux upstream can be done from 2 different places as of now.</p>
+<ul>
+<li><a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git">https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git</a></li>
+<li><a href="https://android.googlesource.com/kernel/common/+refs">https://android.googlesource.com/kernel/common/+refs</a></li>
+<li><a href="https://github.com/android-linux-stable/">https://github.com/android-linux-stable/</a></li>
+</ul>
 <p><strong>What is the diff?</strong>
 Kernel/common is done by the same person who deals with merges on kernel.org git.
 Its adapted for android, if you want the bleeding edge patches working perfectly on android you need to head right here.</p>
@@ -170,33 +237,11 @@ Checkout the branches and decide which one you need.</p>
         </item>
         
         <item>
-            <title>New Bug Tracker</title>
-            <link>https://baalajimaestro.me/posts/bugtracker/</link>
-            <pubDate>Mon, 21 Oct 2019 19:33:00 +0530</pubDate>
-            
-            <guid>https://baalajimaestro.me/posts/bugtracker/</guid>
-            <description>This post serves as an announcement to the new bugtracker service I have started to use.
-This is an unified bugtracker for all projects I work on. People need to report bugs here so that it can be looked after by any of the devs.
-Well, the login creds for the issue tracker are as follows.
-Username: issue@issue.com
-Password: issue
-Report the bug at the right project. It will assigned and looked after as soon as possible.</description>
-            <content type="html"><![CDATA[<p>This post serves as an announcement to the new bugtracker service I have started to use.</p>
-<p>This is an unified bugtracker for all projects I work on. People need to report bugs here so that it can be looked after by any of the devs.</p>
-<p>Well, the login creds for the issue tracker are as follows.</p>
-<p><code>Username: issue@issue.com</code></p>
-<p><code>Password: issue</code></p>
-<p>Report the bug at the right project. It will assigned and looked after as soon as possible.</p>
-<p>Have a nice day!</p>
-]]></content>
-        </item>
-        
-        <item>
             <title>Vendor Blob Extraction</title>
-            <link>https://baalajimaestro.me/posts/extract-vendor/</link>
+            <link>https://unicote.github.io/posts/2019/10/vendor-blob-extraction/</link>
             <pubDate>Thu, 10 Oct 2019 21:24:00 +0530</pubDate>
             
-            <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
+            <guid>https://unicote.github.io/posts/2019/10/vendor-blob-extraction/</guid>
             <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
 ⚠️ Note that you need a fully synced rom source for this.
   Place the Device Tree with the extract-files.sh inside.
@@ -221,24 +266,28 @@ Report the bug at the right project. It will assigned and looked after as soon a
 <p>Now see if it has a payload.bin or system.dat.br and vendor.dat.br</p>
 </li>
 </ul>
-<h3 id="if-it-has-a-payloadbin-then-your-device-is-ab-and-the-job-is-actually-very-easy">If it has a payload.bin, then, your device is A/B, and the job is actually very easy,</h3>
+<h3 id="if-it-has-a-payloadbin-then-your-device-is-ab-and-the-job-is-actually-very-easy">If it has a payload.bin, then, your device is A/B, and the job is actually very easy</h3>
 <ul>
 <li>Use <a href="https://forum.xda-developers.com/attachment.php?attachmentid=4760222">this tool</a> and run the python file in it.</li>
 <li>You will now have img files ready.</li>
 </ul>
-<h3 id="you-are-unlucky-and-have-br-files-inside">You are unlucky and have br files inside.</h3>
+<h3 id="you-are-unlucky-and-have-br-files-insides">You are unlucky and have br files insides</h3>
 <p>So what? We can still extract them, a bit of more work, but yes we can.</p>
 <ul>
 <li>Install brotli from your package manager</li>
 <li>Run the following commands, it will decompress the brotli compression of your images</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brotli --decompress system.new.dat.br
+brotli --decompress system_ext.new.dat.br
+brotli --decompress product.new.dat.br
 brotli --decompress vendor.new.dat.br
 </code></pre></div><ul>
 <li>Now we to convert the dat files to img, run these commands on terminal, to convert it</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sLo sdat2img.py https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
 python3 sdat2img.py system.transfer.list system.new.dat
+python3 sdat2img.py system_ext.transfer.list system_ext.new.dat system_ext.img
+python3 sdat2img.py product.transfer.list product.new.dat product.img
 python3 sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
 </code></pre></div><ul>
 <li>Now you would have both the images ready for extracting.</li>
@@ -249,6 +298,8 @@ python3 sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
 <li>Create folders for extracting.</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p system
+mkdir -p system_ext
+mkdir -p product
 mkdir -p vendor
 </code></pre></div><ul>
 <li>
@@ -259,6 +310,8 @@ mkdir -p vendor
 </li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z x system.img -y -osystem
+7z x system.img -y -osystem_ext
+7z x vendor.img -y -oproduct
 7z x vendor.img -y -ovendor
 </code></pre></div><p>In your folder, there would be two folders system and vendor, with many files now.</p>
 <h3 id="pulling--blobs">Pulling  blobs</h3>
@@ -279,10 +332,10 @@ mkdir -p vendor
         
         <item>
             <title>Opensource and Monetization</title>
-            <link>https://baalajimaestro.me/posts/opensource-and-monetisation/</link>
+            <link>https://unicote.github.io/posts/2019/06/opensource-and-monetization/</link>
             <pubDate>Mon, 24 Jun 2019 03:30:00 +0530</pubDate>
             
-            <guid>https://baalajimaestro.me/posts/opensource-and-monetisation/</guid>
+            <guid>https://unicote.github.io/posts/2019/06/opensource-and-monetization/</guid>
             <description>Seems like these don’t go hand in hand, does it?
 Lemme view it from my perspective.
 Recently there was an android kernel developer who tried to monetize his kernel in the most inappropriate way possible. It became disastrous and he became a meme in that process. He was forced to leave development, forever.
@@ -315,10 +368,10 @@ So where are people going wrong in their attempts to monetise their works?</p>
         
         <item>
             <title>Git For Newbies</title>
-            <link>https://baalajimaestro.me/posts/git-for-newbies/</link>
+            <link>https://unicote.github.io/posts/2019/06/git-for-newbies/</link>
             <pubDate>Tue, 18 Jun 2019 12:29:41 +0800</pubDate>
             
-            <guid>https://baalajimaestro.me/posts/git-for-newbies/</guid>
+            <guid>https://unicote.github.io/posts/2019/06/git-for-newbies/</guid>
             <description>Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
  Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&amp;rsquo;t have to type $ on your terminal.</description>
             <content type="html"><![CDATA[<p>Before we start make sure <code>git --version</code> command successfully returns. If the output is something like <strong>command not found</strong> then please make sure Git is properly installed on your machine. My machine output is shown below. <strong>Output on your machine might be different.</strong></p>
@@ -331,8 +384,8 @@ $ git config --global user.email <span style="color:#e6db74">&#34;Your email&#34
 </code></pre></div><p>The command shown above populates a file named <code>.gitconfig</code> in your user home directory with configuration information.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat ~/.gitconfig
 </code></pre></div><pre><code>[user]
-	name = baalajimaestro
-	email = baalajimaestro@computer4u.com
+	name = Unicote
+	email = Unicote85@gmail.com
 </code></pre><h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li>Why version control system?</li>

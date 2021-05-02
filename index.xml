@@ -1,46 +1,72 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>baalajimaestro</title>
-    <link>https://baalajimaestro.me/</link>
-    <description>Recent content on baalajimaestro</description>
+    <title>Unicote</title>
+    <link>https://unicote.github.io/</link>
+    <description>Recent content on Unicote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Maestro Creativescape</copyright>
-    <lastBuildDate>Tue, 07 Jul 2020 12:29:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 May 2021 15:58:00 +0300</lastBuildDate><atom:link href="https://unicote.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up a working environment for build</title>
+      <link>https://unicote.github.io/posts/2021/05/setting-up-a-working-environment-for-build/</link>
+      <pubDate>Thu, 13 May 2021 15:58:00 +0300</pubDate>
+      
+      <guid>https://unicote.github.io/posts/2021/05/setting-up-a-working-environment-for-build/</guid>
+      <description>⚠️ Note: I am using ubuntu 20.04. This manual is suitable for ubuntu 20.04, performance on other OC/versions is unknown.  Installing &amp;amp; updating packages  To begin with, we will update the existing packages in the system:  sudo apt-get update &amp;amp;&amp;amp; sudo apt-get dist-upgrade  Now we will install the packages we need, which are not present by default in the system:  sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip bc ccache git imagemagick lib32readline-dev lib32z1-dev liblz4-tool pngquant libncurses5 libncurses5-dev libsdl1.</description>
+    </item>
     
-	<atom:link href="https://baalajimaestro.me/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>POCO X3 (surya)</title>
+      <link>https://unicote.github.io/builds/surya/</link>
+      <pubDate>Sun, 02 May 2021 17:16:00 +0300</pubDate>
+      
+      <guid>https://unicote.github.io/builds/surya/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Kernel For Newbies</title>
-      <link>https://baalajimaestro.me/posts/kernel-for-newbies/</link>
+      <link>https://unicote.github.io/posts/2020/07/kernel-for-newbies/</link>
       <pubDate>Tue, 07 Jul 2020 12:29:41 +0800</pubDate>
       
-      <guid>https://baalajimaestro.me/posts/kernel-for-newbies/</guid>
+      <guid>https://unicote.github.io/posts/2020/07/kernel-for-newbies/</guid>
       <description>Lets gear up with the necessary things. You would usually need a minimum of a dual core PC, some odd 4GB ram, and atleast 10GB disk free space. If you don’t match the specs, don’t worry, we can workaround it. And then, you need Linux installed, doesn’t matter any distro, just grab up probably the latest ubuntu/openSUSE/fedora/Arch or whatever that suits you. Kernels can be compiled on literally any distro. They don’t need much of dependencies.</description>
     </item>
     
     <item>
-      <title>New Bug Tracker</title>
-      <link>https://baalajimaestro.me/posts/bugtracker/</link>
-      <pubDate>Mon, 21 Oct 2019 19:33:00 +0530</pubDate>
+      <title>Redmi Note 7 Pro (violet)</title>
+      <link>https://unicote.github.io/builds/violet/</link>
+      <pubDate>Fri, 15 May 2020 12:00:00 +0300</pubDate>
       
-      <guid>https://baalajimaestro.me/posts/bugtracker/</guid>
-      <description>This post serves as an announcement to the new bugtracker service I have started to use.
-This is an unified bugtracker for all projects I work on. People need to report bugs here so that it can be looked after by any of the devs.
-Well, the login creds for the issue tracker are as follows.
-Username: issue@issue.com
-Password: issue
-Report the bug at the right project. It will assigned and looked after as soon as possible.</description>
+      <guid>https://unicote.github.io/builds/violet/</guid>
+      <description>EvolutionX_4.3_violet-10.0-20200515-1550-OFFICIAL.zip - May security patch - Update to Pixel 4 May 2020 build fingerprint - Transition to a new tree - Dual LTE enabled - Enable A-GPS - Custom HALs used - Changes in corner rounding - Speaker issues fixed - Many sound enhancements - Use qcom impl for sw effects - Unlocked video viewing in 2160p on YouTube - Enabling sound trigger V2_2 - Vendor is built into the ROM - Enable 2.</description>
+    </item>
+    
+    <item>
+      <title>Redmi Note 7 (lavender)</title>
+      <link>https://unicote.github.io/builds/lavender/</link>
+      <pubDate>Sat, 25 Apr 2020 15:00:00 +0300</pubDate>
+      
+      <guid>https://unicote.github.io/builds/lavender/</guid>
+      <description>EvolutionX_4.20.2_lavender-10.0-20200425-1633-UNOFFICIAL.zip - Intial build  Download  </description>
+    </item>
+    
+    <item>
+      <title>Redmi 5 Plus (vince)</title>
+      <link>https://unicote.github.io/builds/vince/</link>
+      <pubDate>Sat, 25 Apr 2020 14:29:30 +0300</pubDate>
+      
+      <guid>https://unicote.github.io/builds/vince/</guid>
+      <description>EvolutionX_4.20.2_vince-10.0-20200425-1140-UNOFFICIAL.zip - Intial build  Download  </description>
     </item>
     
     <item>
       <title>Vendor Blob Extraction</title>
-      <link>https://baalajimaestro.me/posts/extract-vendor/</link>
+      <link>https://unicote.github.io/posts/2019/10/vendor-blob-extraction/</link>
       <pubDate>Thu, 10 Oct 2019 21:24:00 +0530</pubDate>
       
-      <guid>https://baalajimaestro.me/posts/extract-vendor/</guid>
+      <guid>https://unicote.github.io/posts/2019/10/vendor-blob-extraction/</guid>
       <description>How to extract vendor blobs from stock rom? I got asked this question a lot, so I&amp;rsquo;ll post it here. Its gonna just be steps on how to do it.
 ⚠️ Note that you need a fully synced rom source for this.
   Place the Device Tree with the extract-files.sh inside.
@@ -49,10 +75,10 @@ Report the bug at the right project. It will assigned and looked after as soon a
     
     <item>
       <title>Opensource and Monetization</title>
-      <link>https://baalajimaestro.me/posts/opensource-and-monetisation/</link>
+      <link>https://unicote.github.io/posts/2019/06/opensource-and-monetization/</link>
       <pubDate>Mon, 24 Jun 2019 03:30:00 +0530</pubDate>
       
-      <guid>https://baalajimaestro.me/posts/opensource-and-monetisation/</guid>
+      <guid>https://unicote.github.io/posts/2019/06/opensource-and-monetization/</guid>
       <description>Seems like these don’t go hand in hand, does it?
 Lemme view it from my perspective.
 Recently there was an android kernel developer who tried to monetize his kernel in the most inappropriate way possible. It became disastrous and he became a meme in that process. He was forced to leave development, forever.
@@ -62,33 +88,32 @@ Red Hat is the global leader in open source software solutions — and has a cle
     
     <item>
       <title>Git For Newbies</title>
-      <link>https://baalajimaestro.me/posts/git-for-newbies/</link>
+      <link>https://unicote.github.io/posts/2019/06/git-for-newbies/</link>
       <pubDate>Tue, 18 Jun 2019 12:29:41 +0800</pubDate>
       
-      <guid>https://baalajimaestro.me/posts/git-for-newbies/</guid>
+      <guid>https://unicote.github.io/posts/2019/06/git-for-newbies/</guid>
       <description>Before we start make sure git --version command successfully returns. If the output is something like command not found then please make sure Git is properly installed on your machine. My machine output is shown below. Output on your machine might be different.
  Commands that a user should type on his/her terminal are prefixed with the shell prompt symbol $. The output of command follows the command. Also, you don&amp;rsquo;t have to type $ on your terminal.</description>
     </item>
     
     <item>
-      <title>$whoami</title>
-      <link>https://baalajimaestro.me/about/</link>
+      <title>$who_am_i</title>
+      <link>https://unicote.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://baalajimaestro.me/about/</guid>
-      <description>I am Baalaji Balasubramani, a 21 year old, popularly known around the internet world as baalajimaestro.
-I work on a lot of opensource projects, you can find them all on my GitHub!
-I was using Linux as a primary OS for 4 years, and now I switched to WSL2, and nuked the dual boot, seems a lot better. I will not be writing a review about WSL2, rather I could say it does suit my needs!</description>
+      <guid>https://unicote.github.io/about/</guid>
+      <description>My name is Kotya Agapkin, who is called Unicote on the Internet. I am just learning to work on some projects like android roms or scripts in some programming language. I&amp;rsquo;ve been using Linux as my main OS for 3 years now and I seem to be good at something already :-)
+I prefer Python for programming, but I also learn other languages.
+It&amp;rsquo;s hard to see me without writing code or thinking about it, even if you did, I would be sleeping or playing!</description>
     </item>
     
     <item>
       <title>Contact Me</title>
-      <link>https://baalajimaestro.me/contact/</link>
+      <link>https://unicote.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://baalajimaestro.me/contact/</guid>
-      <description>I would be available on Telegram almost all time except my sleep. You can DM me on telegram, provided you convey your information concisely and readably, rather than sending a dumb hi and expecting me to respond on it. If you don&amp;rsquo;t have Telegram, no problems, you can tweet to me, @baalajimaestro. You can ping me on discord(baalajimaestro#8313), or email me me@baalajimaestro.me.
-I respond to any message within the same day.</description>
+      <guid>https://unicote.github.io/contact/</guid>
+      <description>I would be available on Telegram almost all time except my sleep. You can PM me on telegram, provided you convey your information concisely and readably, rather than sending a dumb hi and expecting me to respond on it. You can email me arvogl874@gmail.com.</description>
     </item>
     
   </channel>
