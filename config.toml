@@ -1,4 +1,4 @@
-baseurl = "https://unicote.github.io"
+baseURL = "https://unicote.github.io"
 title   = "Unicote"
 languageCode = "en-us"
 theme = "hello-friend-ng"
@@ -7,8 +7,7 @@ PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
 paginate  = 10
-rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+rssLimit  = 0
 
 # googleAnalytics = ""
 # disqusShortname = ""
@@ -61,7 +60,7 @@ disableHugoGeneratorInject = true
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Custom ROM developer"
+  homeSubtitle = "Unicote"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -90,6 +89,12 @@ disableHugoGeneratorInject = true
   #
   enableSharingButtons = true
 
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  #
+  customCSS = []
+  customJS  = []
+
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   #
   justifyContent = false  # Set "text-align: justify" to .post-content.
@@ -104,7 +109,7 @@ disableHugoGeneratorInject = true
     author = true
 
     topText = []
-    bottomText = ["Made with &#10084; by <a href=\"https://github.com/Unicote\">Unicote</a>"]
+    bottomText = []
 
   # Colors for favicons
   #
@@ -120,7 +125,7 @@ disableHugoGeneratorInject = true
     # Set true to remove the logo cursor entirely.
     # logoCursorDisabled = false
     # Set to a valid CSS color to change the cursor in the logo.
-    # logoCursorColor    = "--logo-cursor-color"
+    # logoCursorColor    = "#67a2c9"
     # Set to a valid CSS time value to change the animation duration, "0s" to disable.
     # logoCursorAnimate  = "2s"
 
@@ -152,22 +157,20 @@ disableHugoGeneratorInject = true
   [[params.social]]
     name = "instagram"
     url = "https://instagram.com/unicote7"
-    
+
 [languages]
   [languages.en]
     subtitle  = "Unicote"
     weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
   [languages.fr]
     subtitle  = "Unicote"
     weight    = 2
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
   [languages.ru]
     subtitle  = "Unicote"
     weight    = 3
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
 [menu]
   [[menu.main]]
     identifier = "about"
