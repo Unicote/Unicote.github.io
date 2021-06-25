@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /public
 git remote rm origin
-git remote add origin https://baalajimaestro:${GH_PERSONAL_TOKEN}@github.com/baalajimaestro/baalajimaestro.github.io
+git remote add origin https://github.com/Unicote/unicote.github.io
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 cd /app
@@ -14,7 +14,7 @@ cd /public
 git add .
 
 # Commit changes.
-git commit -m "[MaestroCI]: Push Built Site"
+git commit -m "[UniCI]: Push Built Site"
 
 # Push source and build repos.
-git push origin master
+git push origin main

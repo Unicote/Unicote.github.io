@@ -19,11 +19,11 @@ I got asked this question a lot, so I'll post it here. Its gonna just be steps o
 
 - Now see if it has a payload.bin or system.dat.br and vendor.dat.br
 
-### If it has a payload.bin, then, your device is A/B, and the job is actually very easy,
+### If it has a payload.bin, then, your device is A/B, and the job is actually very easy
 - Use [this tool](https://forum.xda-developers.com/attachment.php?attachmentid=4760222) and run the python file in it.
 - You will now have img files ready.
 
-### You are unlucky and have br files inside.
+### You are unlucky and have br files insides
 
 So what? We can still extract them, a bit of more work, but yes we can.
 
@@ -31,12 +31,16 @@ So what? We can still extract them, a bit of more work, but yes we can.
 - Run the following commands, it will decompress the brotli compression of your images
 ```bash
 brotli --decompress system.new.dat.br
+brotli --decompress system_ext.new.dat.br
+brotli --decompress product.new.dat.br
 brotli --decompress vendor.new.dat.br
 ```
 - Now we to convert the dat files to img, run these commands on terminal, to convert it
 ```bash
 curl -sLo sdat2img.py https://raw.githubusercontent.com/xpirt/sdat2img/master/sdat2img.py
 python3 sdat2img.py system.transfer.list system.new.dat
+python3 sdat2img.py system_ext.transfer.list system_ext.new.dat system_ext.img
+python3 sdat2img.py product.transfer.list product.new.dat product.img
 python3 sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
 ```
 - Now you would have both the images ready for extracting.
@@ -48,6 +52,8 @@ Lets Extract the img files we have!
 - Create folders for extracting.
 ```bash
 mkdir -p system
+mkdir -p system_ext
+mkdir -p product
 mkdir -p vendor
 ```
 - Install P7-Zip from your package manager
@@ -55,6 +61,8 @@ mkdir -p vendor
 - Now the extraction.
 ```bash
 7z x system.img -y -osystem
+7z x system.img -y -osystem_ext
+7z x vendor.img -y -oproduct
 7z x vendor.img -y -ovendor
 ```
 

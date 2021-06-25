@@ -94,7 +94,7 @@ Mind it these are all tagged with android versions. If you use a kernel that’s
 - You will find kernel/msm-4.4, 4.9, 4.14 and a bunch others
 - According to whats yours, copy that link
 - Then its a usual git merge!
-- git pull https://source.codeaurora.org/quic/la/kernel/msm-4.4/ {YOUR TAG}
+- git pull https://source.codeaurora.org/quic/la/kernel/msm-4.14/ {YOUR TAG}
 - And boom! Again conflicts! Again resolution!
 
 
@@ -116,20 +116,20 @@ git commit
 **Updating to a newer tag**:
 ```bash
 git fetch qcacld-3.0 <TAG>
-git merge -X subtree=drivers/staging/qcacld-3.0 FETCH_HEAD
-Repeat the above for 
-qca-wifi-host-cmn  and fw-api as well.
-qcacld-3.0 source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0
-fw-api source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api
-qca-wifi-host-cmn source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn
+git merge -X subtree=drivers/staging/qcacld-3.0 FETCH_HEAD --allow-unrelated-histories
 ```
+Repeat the above for 
+qca-wifi-host-cmn and fw-api as well.
+- qcacld-3.0 source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0
+- fw-api source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api
+- qca-wifi-host-cmn source: https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn
 
 If you happen to have some merge conflicts, just understand its some bunch of C code, you can understand the logic and figure it out.
 
 Well, techpack of 4.14 too follows similar scheme as you did for the qcacld.
 The repos you need to lookout for are audio-kernel and data-kernel
 
-**Linux Upstream**
+__**Linux Upstream**__
 
 __Why upstream?__:
 
@@ -138,10 +138,10 @@ The point releases like 4.14.170, 171, indicate some vulnerability or performanc
 They dont usually add major changes.
 
 __How to upstream?__:
-Linux upstream can be done from three different places as of now.
-https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-https://android.googlesource.com/kernel/common/+refs
-https://github.com/android-linux-stable/
+Linux upstream can be done from 2 different places as of now.
+- https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+- https://android.googlesource.com/kernel/common/+refs
+- https://github.com/android-linux-stable/
 
 __What is the diff?__
 Kernel/common is done by the same person who deals with merges on kernel.org git.

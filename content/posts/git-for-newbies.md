@@ -21,8 +21,8 @@ $ cat ~/.gitconfig
 ```
 ```
 [user]
-	name = baalajimaestro
-	email = baalajimaestro@computer4u.com
+	name = Unicote
+	email = Unicote85@gmail.com
 ```
 
 ## Table of Contents
